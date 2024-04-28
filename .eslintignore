@@ -1,0 +1,15 @@
+# ignore eslint files
+.gitignore
+*.svg
+*.ico
+*.json
+*.md
+*.log
+*.lock
+*.d.ts
+
+!.vitepress
+.vitepress/cache
+.vitepress/dist
+/node_modules/*
+/mock/*
