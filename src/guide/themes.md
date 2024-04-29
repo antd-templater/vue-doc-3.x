@@ -279,7 +279,7 @@ watchEffect(() => {
 
 :::tip 注意
 
-就 `ConfigProvider` 对 `message.xxx`、`Modal.xxx`、`notification.xxx` 而言，由于 Ant Design Vue 会通过 render 动态创建新的 Vue 实例，其 context 与当前代码所在 context 并不相同，因而无法获取 context 信息。
+就 `ConfigProvider` 对 `Message.xxx`、`Modal.xxx`、`Notification.xxx` 而言，由于 Ant Design Vue 会通过 render 动态创建新的 Vue 实例，其 context 与当前代码所在 context 并不相同，因而无法获取 context 信息，也就无法通过 `ConfigProvider` 配置定制。
 
 :::
 

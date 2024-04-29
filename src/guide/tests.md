@@ -4,7 +4,7 @@ aside: false
 
 # Test 测试工具
 
-::: details Test (Cypress、vitest) {open}
+::: details 测试相关 (Cypress、Vitest) {open}
 
 ```bash
   ├── cypress                              # Cypress 资源配置
@@ -20,7 +20,7 @@ aside: false
   │   │   ├── -Login.vue.cy.ts             # 范例: cypress 测试 Login Vue 组件
   │   │   ├── tsconfig.json                # 定义: cypress TS 配置文件
   │   │                                    #
-  │   ├── vitest                          # vitest
+  │   ├── vitest                           # vitest
   │   │   ├── -utils.test.ts               # 范例: vitest 测试 Utils Api
   │   │   ├── tsconfig.json                # 定义: vitest TS 配置文件
   │
@@ -30,7 +30,7 @@ aside: false
 
 :::
 
-::: info Cypress、vitest 两种测试工具:
+::: info Cypress、Vitest 两种测试工具:
 
 - `Vitest` 由 Vite 驱动的测试工具，专注于为测试非浏览器逻辑提供最佳的体验 (例: 测试 Utils Api)。
 - `Cypress` 基于 浏览器 的测试工具，专注于为测试浏览器中渲染效果提供最真实的反馈 (例: 测试 Vue 组件)。
@@ -172,7 +172,7 @@ export default defineConfig(({ mode }) => {
 
 ## Cypress
 
-<img alt="Vitest" src="/cypress.png" style="border: solid 1px #cccccc; border-radius: 4px;">
+<img alt="Cypress" src="/cypress.png" style="border: solid 1px #cccccc; border-radius: 4px;">
 
 ::: details 测试用例、配置文件
 

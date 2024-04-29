@@ -144,7 +144,7 @@ aside: false
   │   │   ├── -Login.vue.cy.ts             # 范例: cypress 测试 Login Vue 组件
   │   │   ├── tsconfig.json                # 定义: cypress TS 配置文件
   │   │                                    #
-  │   ├── vitest                          # vitest (由 Vite 驱动的测试工具，主要用于测试不依赖浏览器的逻辑)
+  │   ├── vitest                           # vitest (由 Vite 驱动的测试工具，主要用于测试不依赖浏览器的逻辑)
   │   │   ├── -utils.test.ts               # 范例: vitest 测试 Utils Api
   │   │   ├── tsconfig.json                # 定义: vitest TS 配置文件
   │
