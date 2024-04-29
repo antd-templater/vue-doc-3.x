@@ -46,22 +46,10 @@ aside: false
 ::: code-group
 
 ```typescript:line-numbers [范例 - utils.test]
-import { request } from "@/utils/request";
 import { takeFixed } from "@/utils/common";
 import { TakeFixed } from "@/utils/common";
 import { takePadEnd } from "@/utils/common";
 import { TakePadEnd } from "@/utils/common";
-import { http, HttpResponse } from "msw";
-import { setupServer } from "msw/node";
-import { AxiosError } from "axios";
-
-vi.mock("@/store/user", () => {
-  const module = {
-    token: "",
-    logout: () => Promise.resolve()
-  };
-  return { default: vi.fn(() => module) };
-});
 
 describe("@utils/common.ts", () => {
   it("Check Call takeFixed", () => {
@@ -78,56 +66,6 @@ describe("@utils/common.ts", () => {
 
   it("Check Type takePadEnd", () => {
     return expectTypeOf(takePadEnd).toEqualTypeOf<TakePadEnd>();
-  });
-});
-
-describe("@utils/request.ts", () => {
-  const server = setupServer(
-    http.post("http://api.test.com/updateUserInfo", () => {
-      return HttpResponse.json({
-        code: "0000",
-        message: null,
-        result: "success"
-      });
-    }),
-
-    http.get("http://api.test.com/loginUserInfo", () => {
-      return HttpResponse.json({
-        code: "0000",
-        message: null,
-        result: { name: "admin", email: "admin@gmail.com" }
-      });
-    })
-  );
-
-  beforeAll(() => server.listen({ onUnhandledRequest: "error" }));
-  afterEach(() => server.resetHandlers());
-  afterAll(() => server.close());
-
-  it("Check request.post - eg. updateUserInfo", async () => {
-    const options = {
-      url: "http://api.test.com/updateUserInfo",
-      method: "post"
-    };
-    const response = { code: "0000", message: null, result: "success" };
-    await expect(request(options)).resolves.toMatchObject(response);
-  });
-
-  it("Check request.get - eg. loginUserInfo", async () => {
-    const options = { url: "http://api.test.com/loginUserInfo", method: "get" };
-    const response = {
-      code: "0000",
-      message: null,
-      result: { name: "admin", email: "admin@gmail.com" }
-    };
-    await expect(request(options)).resolves.toMatchObject(response);
-  });
-
-  it("Check request.get - eg. unusableApi", async () => {
-    const options = { url: "http://api.test.com/unusableApi", method: "get" };
-    await expect(request(options)).rejects.toStrictEqual(
-      expect.any(AxiosError)
-    );
   });
 });
 ```
