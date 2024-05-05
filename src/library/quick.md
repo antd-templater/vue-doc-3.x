@@ -177,7 +177,7 @@ const groups = formGroupsDefiner([
 
 ## 提示和辅助
 
-在 **SForm 范例** 中，我们为了在定义 `groups` 时有良好的 TS 支持和提示，手动导入并使用 `formGroupsDefiner` 辅助。但能否自动按需导入呢？答案是可以的，需要适配如下:
+在 **SForm 范例** 中，我们为了在定义 `groups` 时有良好的 TS 支持和提示，手动导入并使用 `formGroupsDefiner` 辅助。但能否自动按需导入呢？答案是可以的，需要配置如下:
 
 ::: details ESlint => `@antd-templater/eslint-config`
 
