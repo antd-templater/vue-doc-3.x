@@ -1,12 +1,3 @@
----
-aside: false
----
-
-# 项目开发配置
-
-项目根目录下建立 .vscode/settings.json 文件，统一开发配置
-
-```json
 {
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -45,8 +36,8 @@ aside: false
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "editor.detectIndentation": false,
-  "editor.renderControlCharacters": true,
   "eslint.experimental.useFlatConfig": true,
+  "editor.renderControlCharacters": true,
   "eslint.format.enable": true,
   "eslint.probe": [
     "javascript",
@@ -69,6 +60,10 @@ aside: false
   "prettier.htmlWhitespaceSensitivity": "ignore",
   "prettier.quoteProps": "consistent",
   "prettier.arrowParens": "avoid",
-  "prettier.trailingComma": "es5"
+  "prettier.trailingComma": "es5",
+  "stylusSupremacy.insertColons": true,
+  "stylusSupremacy.insertBraces": false,
+  "stylusSupremacy.insertSemicolons": false,
+  "stylusSupremacy.insertNewLineAroundImports": false,
+  "stylusSupremacy.insertNewLineAroundBlocks": false
 }
-```

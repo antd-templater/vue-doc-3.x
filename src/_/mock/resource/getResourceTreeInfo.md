@@ -6,7 +6,7 @@ const tag = "查询所有菜单资源";
 const url = resolver("/resource/getResourceTreeInfo");
 
 worker.use(
-  http.post(url, async req => {
+  http.post(url, async (req) => {
     const body = await rester.body(req);
     const query = await rester.query(req);
     const params = await rester.params(req);
@@ -50,7 +50,7 @@ worker.use(
                   hideChildInMenu: "N",
                   hideInMenu: "N",
                   allowCache: "Y",
-                  activity: "Y"
+                  activity: "Y",
                 },
                 {
                   sort: 1000200,
@@ -66,7 +66,7 @@ worker.use(
                   hideChildInMenu: "N",
                   hideInMenu: "N",
                   allowCache: "Y",
-                  activity: "Y"
+                  activity: "Y",
                 },
                 {
                   sort: 1000300,
@@ -82,7 +82,7 @@ worker.use(
                   hideChildInMenu: "N",
                   hideInMenu: "N",
                   allowCache: "Y",
-                  activity: "Y"
+                  activity: "Y",
                 },
                 {
                   sort: 1000400,
@@ -98,17 +98,17 @@ worker.use(
                   hideChildInMenu: "N",
                   hideInMenu: "N",
                   allowCache: "Y",
-                  activity: "Y"
-                }
-              ]
-            }
-          ]
-        }
-      ]
+                  activity: "Y",
+                },
+              ],
+            },
+          ],
+        },
+      ],
     };
 
     // 打印日志 (浏览器端)
-    printer(log => {
+    printer((log) => {
       log("[body] - ", body);
       log("[query] - ", query);
       log("[params] - ", params);

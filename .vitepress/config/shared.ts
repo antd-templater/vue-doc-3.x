@@ -18,27 +18,27 @@ export const shared = defineConfig({
     ['meta', { property: 'og:title', content: 'Antd Templater | Backend Management System Template' }],
     ['meta', { property: 'og:image', content: 'https://antd-templater.github.io/resource/Ant-Templater3.x.png' }],
     ['link', { rel: 'icon', type: 'image/svg+xml', href: `${base}/logo-mini.svg` }],
-    ['link', { rel: 'icon', type: 'image/png', href: `${base}/logo-mini.png` }]
+    ['link', { rel: 'icon', type: 'image/png', href: `${base}/logo-mini.png` }],
   ],
 
   themeConfig: {
     logo: {
       src: `/logo-mini.svg`,
       width: 24,
-      height: 24
+      height: 24,
     },
 
     socialLinks: [
-      { icon: 'github', link: `${base}/redirect?https://\${domain}.com/antd-templater/template-3.x` }
+      { icon: 'github', link: `${base}/redirect?https://\${domain}.com/antd-templater/template-3.x` },
     ],
 
     search: {
-      provider: 'local'
-    }
+      provider: 'local',
+    },
   },
 
   lastUpdated: true,
   cleanUrls: false,
   srcDir: src,
-  base: base
+  base: base,
 })

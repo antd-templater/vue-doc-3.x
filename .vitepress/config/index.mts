@@ -6,6 +6,6 @@ export default defineConfig({
   ...shared,
 
   locales: {
-    root: { label: '简体中文', ...zh }
-  }
+    root: { label: '简体中文', ...zh },
+  },
 })

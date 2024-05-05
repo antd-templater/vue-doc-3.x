@@ -6,7 +6,7 @@ const tag = "获取用户菜单";
 const url = resolver("/auth/loginUserMenu");
 
 worker.use(
-  http.post(url, async req => {
+  http.post(url, async (req) => {
     const body = await rester.body(req);
     const query = await rester.query(req);
     const params = await rester.params(req);
@@ -29,8 +29,8 @@ worker.use(
             title: "系统管理",
             hideChildInMenu: "N",
             hideInMenu: "N",
-            allowCache: "Y"
-          }
+            allowCache: "Y",
+          },
         },
         {
           sort: 1000100,
@@ -45,8 +45,8 @@ worker.use(
             title: "组织管理",
             hideChildInMenu: "N",
             hideInMenu: "N",
-            allowCache: "Y"
-          }
+            allowCache: "Y",
+          },
         },
         {
           sort: 1000200,
@@ -61,8 +61,8 @@ worker.use(
             title: "资源管理",
             hideChildInMenu: "N",
             hideInMenu: "N",
-            allowCache: "Y"
-          }
+            allowCache: "Y",
+          },
         },
         {
           sort: 1000300,
@@ -77,8 +77,8 @@ worker.use(
             title: "角色管理",
             hideChildInMenu: "N",
             hideInMenu: "N",
-            allowCache: "Y"
-          }
+            allowCache: "Y",
+          },
         },
         {
           sort: 1000400,
@@ -93,14 +93,14 @@ worker.use(
             title: "用户管理",
             hideChildInMenu: "N",
             hideInMenu: "N",
-            allowCache: "Y"
-          }
-        }
-      ]
+            allowCache: "Y",
+          },
+        },
+      ],
     };
 
     // 打印日志 (浏览器端)
-    printer(log => {
+    printer((log) => {
       log("[body] - ", body);
       log("[query] - ", query);
       log("[params] - ", params);

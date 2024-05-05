@@ -13,7 +13,7 @@
 
 <script setup lang="ts">
 defineOptions({
-  name: "CustomButton"
+  name: "CustomButton",
 });
 </script>
 
@@ -32,13 +32,13 @@ defineOptions({
 ```typescript
 // Bad
 export default defineComponent({
-  name: "Todo"
+  name: "Todo",
   // ...
 });
 
 // Good
 export default defineComponent({
-  name: "TodoComponent"
+  name: "TodoComponent",
   // ...
 });
 ```
@@ -131,7 +131,7 @@ export default defineComponent({
     {{
       fullName
         .split(" ")
-        .map(word => word[0].toUpperCase() + word.slice(1))
+        .map((word) => word[0].toUpperCase() + word.slice(1))
         .join(" ")
     }}
   </div>
@@ -155,7 +155,7 @@ const fullName = ref("todo component");
 
 const computedFullName = computed(() => {
   const names = fullName.value.split(" ");
-  return names.map(word => word[0].toUpperCase() + word.slice(1)).join(" ");
+  return names.map((word) => word[0].toUpperCase() + word.slice(1)).join(" ");
 });
 </script>
 ```
@@ -340,8 +340,8 @@ import NewComponent from "NewComponent";
 export default defineComponent({
   name: "WelcomeMessage",
   props: {
-    "greeting-text": VueTypes.string().def("")
-  }
+    "greeting-text": VueTypes.string().def(""),
+  },
 });
 </script>
 
@@ -354,8 +354,8 @@ export default defineComponent({
 export default defineComponent({
   name: "WelcomeMessage",
   props: {
-    greetingText: VueTypes.string().def("")
-  }
+    greetingText: VueTypes.string().def(""),
+  },
 });
 </script>
 

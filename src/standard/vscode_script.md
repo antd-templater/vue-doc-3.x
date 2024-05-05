@@ -4,7 +4,7 @@ aside: false
 
 # 项目脚本指令
 
-::: info 命令行 Prettier 格式化 -> [.prettierignore](https://github.com/antd-templater/antd-template-vue3.x/blob/main/.prettierignore)、[.prettierrc](https://github.com/antd-templater/antd-template-vue3.x/blob/main/.prettierrc)
+::: info 命令行 Prettier 格式化 -> <a :href="prettierrc" target="_blank">.prettierrc</a>、<a :href="prettierignore" target="_blank">.prettierignore</a>
 
 ```bash
   npx prettier --write --loglevel warn "src/**/*.vue"
@@ -12,10 +12,30 @@ aside: false
 
 :::
 
-::: info 命令行 ESlint 格式化 -> [.eslintignore](https://github.com/antd-templater/antd-template-vue3.x/blob/main/.eslintignore)、[.eslintrc.cjs](https://github.com/antd-templater/antd-template-vue3.x/blob/main/.eslintrc.cjs)
+::: info 命令行 ESlint 格式化 -> <a :href="eslintconfigmjs" target="_blank">eslint.config.mjs</a>
 
 ```bash
-  npx eslint --fix --quiet src --ext .vue,.tsx,.jsx,.ts,.js
+  npx eslint --fix --quiet src/**/*{.vue,.tsx,.ts}
 ```
 
 :::
+
+<script setup lang="ts">
+import { ref } from 'vue'
+import { onMounted } from 'vue'
+
+const prettierrc = ref('https://github.com/antd-templater/antd-template-vue3.x/blob/main/.prettierrc')
+const prettierignore = ref('https://github.com/antd-templater/antd-template-vue3.x/blob/main/.prettierignore')
+const eslintconfigmjs = ref('https://github.com/antd-templater/antd-template-vue3.x/blob/main/eslint.config.mjs')
+
+onMounted(() => {
+  const href = window.location.href
+  const gitee = 'https://antd-templater.gitee.io/'
+
+  if (href.startsWith(gitee)) {
+    prettierrc.value = 'https://gitee.com/antd-templater/antd-template-vue3.x/blob/main/.prettierrc'
+    prettierignore.value = 'https://gitee.com/antd-templater/antd-template-vue3.x/blob/main/.prettierignore'
+    eslintconfigmjs.value = 'https://gitee.com/antd-templater/antd-template-vue3.x/blob/main/eslint.config.mjs'
+  }
+})
+</script>

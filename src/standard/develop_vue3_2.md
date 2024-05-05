@@ -838,7 +838,7 @@ defineExpose({
 ```tsx [定义组件名称]
 defineOptions({
   name: "TodoList",
-  inheritAttrs: false
+  inheritAttrs: false,
 });
 ```
 
@@ -878,7 +878,7 @@ defineExpose({
   onChange,
   onFilter,
   onScroll,
-  onClick
+  onClick,
 });
 ```
 
@@ -1293,8 +1293,8 @@ export default defineComponent({
     "update:items": (input: Array<Item>) => true,
     "update:state": (state: boolean | null) => true,
     scroll: (event: Event) => true,
-    click: (item: Item) => true
-  }
+    click: (item: Item) => true,
+  },
   // ...
 });
 ```
@@ -1312,7 +1312,7 @@ export default defineComponent({
       index: number;
       item: Item;
     };
-  }>
+  }>,
   // ...
 });
 ```
@@ -1342,14 +1342,14 @@ export default defineComponent({
 
     ctx.expose({
       onInput,
-      onChange
+      onChange,
       // ...
     });
 
     return () => {
       // ...
     };
-  }
+  },
 });
 ```
 

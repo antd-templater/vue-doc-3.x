@@ -86,8 +86,8 @@ export default defineConfig(({ mode }) => {
 
     test: {
       globals: true,
-      environment: "jsdom"
-    }
+      environment: "jsdom",
+    },
   };
 });
 ```
@@ -95,8 +95,8 @@ export default defineConfig(({ mode }) => {
 ```json:line-numbers [配置 - ts.config.json]
 {
   "compilerOptions": {
-    "types": ["vitest/globals", "node"]
-  }
+    "types": ["vitest/globals", "node"],
+  },
 }
 ```
 
@@ -148,17 +148,17 @@ export default defineConfig({
   component: {
     devServer: {
       framework: "vue",
-      bundler: "vite"
-    }
-  }
+      bundler: "vite",
+    },
+  },
 });
 ```
 
 ```json:line-numbers [配置 - ts.config.json]
 {
   "compilerOptions": {
-    "types": ["cypress", "node"]
-  }
+    "types": ["cypress", "node"],
+  },
 }
 ```
 

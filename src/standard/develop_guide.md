@@ -57,6 +57,7 @@ aside: false
   │   │   ├── Axios.d.ts                   # 预设定义 Axios 相关类型 (AxiosSorter ...)
   │   │   ├── Global.d.ts                  # 预设定义 JSX API / Window API 类型
   │   │   ├── ImportMeta.d.ts              # 预设定义 Vite Environment 类型
+  │   │   ├── Pinia.d.ts                   # 扩展定义 pinia-plugin-persist 类型
   │   │
   │   ├── layout                           # 布局组件库
   │   │   ├── components                   # 储存仅布局组件依赖的组件
@@ -154,9 +155,7 @@ aside: false
   ├── .env.development                     # 本地开发环境配置, 会覆盖 .env 文件同名属性配置
   ├── .env.production                      # 正式运行环境配置, 会覆盖 .env 文件同名属性配置
   ├── .env.test                            # 测试运行环境配置, 会覆盖 .env 文件同名属性配置
-  ├── .eslintignore                        # 指定 eslint 哪些文件不需要校验
   ├── .eslintrc-auto-import.json           # 是由 unplugin-auto-import/vite 插件自动生成 (在 eslint extends 中配置)
-  ├── .eslintrc.cjs                        # 指定 eslint 校验的规则配置
   ├── .gitattributes                       # 指定 git 使用的文件和路径的属性
   ├── .gitignore                           # 指定 git 哪些文件不需要添加到版本管理中
   ├── .lintstagedrc.js                     # 指定 lint-staged 配置选项
@@ -165,10 +164,10 @@ aside: false
   ├── .prettierignore                      # 指定 prettier 哪些文件不需要校验
   ├── .prettierrc                          # 指定 prettier 格式的规则配置
   ├── .release-it.json                     # 指定 release-it 配置选项
-  ├── .stylelintrc.js                      # 指定 stylelint 配置选项
   ├── auto-imports.d.ts                    # 是由 unplugin-auto-import/vite 插件自动生成
   ├── commitlint.config.js                 # 指定 @commitlint/cli、@commitlint/config-conventional 的配置选项
   ├── components.d.ts                      # 是由 unplugin-vue-components/vite 插件自动生成
+  ├── eslint.config.mjs                    # 指定 eslint 校验的规则配置 (ESLint v9.x)
   ├── cypress.config.ts                    # Cypress 配置文件
   ├── index.html                           # 编译构建所需的 html 模版文件
   ├── LICENSE                              # 前端项目许可文件
@@ -183,7 +182,7 @@ aside: false
 ## 依赖管理
 
 - Pnpm 版本: `>=7`
-- Node 版本: `>=18.0.0`
+- Node 版本: `^18.18.0 || ^20.9.0 || >=21.1.0`
 
 ```bash
   # 本地初始化 (生成 package.json)

@@ -1,1 +1,1 @@
-# SEllipsis
+# 文字省略提示 - SEllipsis

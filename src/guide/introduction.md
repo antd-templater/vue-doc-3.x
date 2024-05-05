@@ -22,8 +22,9 @@ aside: false
 - [Vue3 API](https://cn.vuejs.org/api/)
 - [Vue3 文档](https://cn.vuejs.org/)
 - [Pinia 文档](https://pinia.vuejs.org/)
+- [ESLint 文档](https://eslint.org/docs/)
 - [Vitest 文档](https://cn.vitest.dev/guide/)
-- [Rollup 文档](https://rollupjs.org/introduction/)
+- [Cypress 文档](https://docs.cypress.io/)
 - [TypeScript 文档](https://www.typescriptlang.org/zh/docs/)
 - [Ant Design Vue 文档](https://antdv.com/docs/vue/introduce-cn)
 - [Vue2 迁移到 Vue3 指南](https://v3-migration.vuejs.org/zh/)
@@ -31,7 +32,7 @@ aside: false
 ## 开发环境
 
 - Pnpm 版本: `>=7`
-- Node 版本: `>=18.0.0`
+- Node 版本: `^18.18.0 || ^20.9.0 || >=21.1.0`
 
 ## 如何使用?
 

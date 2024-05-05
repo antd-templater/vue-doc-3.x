@@ -6,7 +6,7 @@ const tag = "获取用户信息";
 const url = resolver("/auth/loginUserInfo");
 
 worker.use(
-  http.post(url, async req => {
+  http.post(url, async (req) => {
     const body = await rester.body(req);
     const query = await rester.query(req);
     const params = await rester.params(req);
@@ -16,7 +16,7 @@ worker.use(
       code: "0000",
       message: null,
       result: {
-        userNo: "182588xxx88",
+        userNo: "admin",
         userName: "admin",
         mobilePhone: "182588xxx88",
         postName: "系统管理",
@@ -32,8 +32,8 @@ worker.use(
               permissionId: "ResourceManage", // 资源管理页面
               actionEntitySet: [
                 { action: "add", defaultCheck: false, describe: "新增" },
-                { action: "del", defaultCheck: false, describe: "删除" }
-              ]
+                { action: "del", defaultCheck: false, describe: "删除" },
+              ],
             },
             {
               permissionId: "RoleManage", // 角色管理页面
@@ -41,8 +41,8 @@ worker.use(
                 { action: "add", defaultCheck: false, describe: "新增" },
                 { action: "del", defaultCheck: false, describe: "删除" },
                 { action: "edit", defaultCheck: false, describe: "修改" },
-                { action: "query", defaultCheck: false, describe: "查询" }
-              ]
+                { action: "query", defaultCheck: false, describe: "查询" },
+              ],
             },
             {
               permissionId: "OrganizeManage", // 组织管理页面
@@ -50,8 +50,8 @@ worker.use(
                 { action: "add", defaultCheck: false, describe: "新增" },
                 { action: "del", defaultCheck: false, describe: "删除" },
                 { action: "edit", defaultCheck: false, describe: "修改" },
-                { action: "query", defaultCheck: false, describe: "查询" }
-              ]
+                { action: "query", defaultCheck: false, describe: "查询" },
+              ],
             },
             {
               permissionId: "UserManage", // 用户管理页面
@@ -59,16 +59,16 @@ worker.use(
                 { action: "add", defaultCheck: false, describe: "新增" },
                 { action: "del", defaultCheck: false, describe: "删除" },
                 { action: "edit", defaultCheck: false, describe: "修改" },
-                { action: "query", defaultCheck: false, describe: "查询" }
-              ]
-            }
-          ]
-        }
-      }
+                { action: "query", defaultCheck: false, describe: "查询" },
+              ],
+            },
+          ],
+        },
+      },
     };
 
     // 打印日志 (浏览器端)
-    printer(log => {
+    printer((log) => {
       log("[body] - ", body);
       log("[query] - ", query);
       log("[params] - ", params);

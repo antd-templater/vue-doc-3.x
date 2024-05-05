@@ -6,7 +6,7 @@ const tag = "分页查询资源信息";
 const url = resolver("/resource/getResourceListInfo");
 
 worker.use(
-  http.post(url, async req => {
+  http.post(url, async (req) => {
     const body = await rester.body(req);
     const query = await rester.query(req);
     const params = await rester.params(req);
@@ -36,7 +36,7 @@ worker.use(
                 hideChildInMenu: "N",
                 hideInMenu: "N",
                 allowCache: "Y",
-                activity: "Y"
+                activity: "Y",
               },
               {
                 sort: 1000200,
@@ -52,7 +52,7 @@ worker.use(
                 hideChildInMenu: "N",
                 hideInMenu: "N",
                 allowCache: "Y",
-                activity: "Y"
+                activity: "Y",
               },
               {
                 sort: 1000300,
@@ -68,7 +68,7 @@ worker.use(
                 hideChildInMenu: "N",
                 hideInMenu: "N",
                 allowCache: "Y",
-                activity: "Y"
+                activity: "Y",
               },
               {
                 sort: 1000400,
@@ -84,14 +84,14 @@ worker.use(
                 hideChildInMenu: "N",
                 hideInMenu: "N",
                 allowCache: "Y",
-                activity: "Y"
-              }
+                activity: "Y",
+              },
             ],
             pageNo: 1,
             pageSize: 20,
             totalSize: 4,
-            totalPage: 1
-          }
+            totalPage: 1,
+          },
         };
         break;
       }
@@ -111,7 +111,7 @@ worker.use(
                 resourceId: "1127282136000102508",
                 resourceName: "add",
                 resourceType: "b",
-                activity: "Y"
+                activity: "Y",
               },
               {
                 sort: 2,
@@ -121,7 +121,7 @@ worker.use(
                 resourceId: "1127282136000102509",
                 resourceName: "del",
                 resourceType: "b",
-                activity: "Y"
+                activity: "Y",
               },
               {
                 sort: 3,
@@ -131,7 +131,7 @@ worker.use(
                 resourceId: "1127282136000102510",
                 resourceName: "edit",
                 resourceType: "b",
-                activity: "Y"
+                activity: "Y",
               },
               {
                 sort: 4,
@@ -141,14 +141,14 @@ worker.use(
                 resourceId: "1127282136000102511",
                 resourceName: "query",
                 resourceType: "b",
-                activity: "Y"
-              }
+                activity: "Y",
+              },
             ],
             pageNo: 1,
             pageSize: 20,
             totalSize: 4,
-            totalPage: 1
-          }
+            totalPage: 1,
+          },
         };
         break;
       }
@@ -168,7 +168,7 @@ worker.use(
                 resourceId: "27245863256459447",
                 resourceName: "add",
                 resourceType: "b",
-                activity: "Y"
+                activity: "Y",
               },
               {
                 sort: 2,
@@ -178,14 +178,14 @@ worker.use(
                 resourceId: "27245863256459449",
                 resourceName: "del",
                 resourceType: "b",
-                activity: "Y"
-              }
+                activity: "Y",
+              },
             ],
             pageNo: 1,
             pageSize: 20,
             totalSize: 2,
-            totalPage: 1
-          }
+            totalPage: 1,
+          },
         };
         break;
       }
@@ -205,7 +205,7 @@ worker.use(
                 resourceId: "27245863256459496",
                 resourceName: "add",
                 resourceType: "b",
-                activity: "Y"
+                activity: "Y",
               },
               {
                 sort: 2,
@@ -215,7 +215,7 @@ worker.use(
                 resourceId: "27245863256459497",
                 resourceName: "del",
                 resourceType: "b",
-                activity: "Y"
+                activity: "Y",
               },
               {
                 sort: 3,
@@ -225,7 +225,7 @@ worker.use(
                 resourceId: "27245863256459498",
                 resourceName: "edit",
                 resourceType: "b",
-                activity: "Y"
+                activity: "Y",
               },
               {
                 sort: 4,
@@ -235,14 +235,14 @@ worker.use(
                 resourceId: "27245863256459499",
                 resourceName: "query",
                 resourceType: "b",
-                activity: "Y"
-              }
+                activity: "Y",
+              },
             ],
             pageNo: 1,
             pageSize: 20,
             totalSize: 4,
-            totalPage: 1
-          }
+            totalPage: 1,
+          },
         };
         break;
       }
@@ -262,7 +262,7 @@ worker.use(
                 resourceId: "1127282136000102580",
                 resourceName: "add",
                 resourceType: "b",
-                activity: "Y"
+                activity: "Y",
               },
               {
                 sort: 2,
@@ -272,7 +272,7 @@ worker.use(
                 resourceId: "1127282136000102581",
                 resourceName: "del",
                 resourceType: "b",
-                activity: "Y"
+                activity: "Y",
               },
               {
                 sort: 3,
@@ -282,7 +282,7 @@ worker.use(
                 resourceId: "1127282136000102582",
                 resourceName: "edit",
                 resourceType: "b",
-                activity: "Y"
+                activity: "Y",
               },
               {
                 sort: 4,
@@ -292,14 +292,14 @@ worker.use(
                 resourceId: "1127282136000102583",
                 resourceName: "query",
                 resourceType: "b",
-                activity: "Y"
-              }
+                activity: "Y",
+              },
             ],
             pageNo: 1,
             pageSize: 20,
             totalSize: 4,
-            totalPage: 1
-          }
+            totalPage: 1,
+          },
         };
         break;
       }
@@ -313,14 +313,14 @@ worker.use(
             pageNo: 1,
             pageSize: 20,
             totalSize: 0,
-            totalPage: 0
-          }
+            totalPage: 0,
+          },
         };
       }
     }
 
     // 打印日志 (浏览器端)
-    printer(log => {
+    printer((log) => {
       log("[body] - ", body);
       log("[query] - ", query);
       log("[params] - ", params);

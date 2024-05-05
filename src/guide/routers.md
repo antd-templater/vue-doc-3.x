@@ -164,31 +164,31 @@ export interface BaseRoute {
   ```typescript
   /* file -> src/router.constant.ts */
 
-  import UserLayout from '@/layout/UserLayout'
-  import defaultRouter from '@/configure/defaultRouter'
-  import type { Route } from '@/router/generate-typing'
+  import UserLayout from "@/layout/UserLayout";
+  import defaultRouter from "@/configure/defaultRouter";
+  import type { Route } from "@/router/generate-typing";
 
-  interface defineRoute extends Route { sort?: number; }
+  interface defineRoute extends Route {
+    sort?: number;
+  }
 
-  export const baseRoutes: defineRoute[] = defaultRouter.constantRoutes // 基础路由
-  export const menuRoutes: defineRoute[] = defaultRouter.rootRoute.children // 菜单路由
+  export const baseRoutes: defineRoute[] = defaultRouter.constantRoutes; // 基础路由
+  export const menuRoutes: defineRoute[] = defaultRouter.rootRoute.children; // 菜单路由
 
   // 范例
-  baseRoutes.push(
-    {
-      path: '/auth',
-      redirect: '/auth/Login',
-      component: UserLayout,
-      children: [
-        {
-          path: 'Login',
-          name: 'Login',
-          component: () => import(`@/views/auth/Login.vue`),
-          meta: { title: '系统登录' }
-        }
-      ]
-    }
-  )
+  baseRoutes.push({
+    path: "/auth",
+    redirect: "/auth/Login",
+    component: UserLayout,
+    children: [
+      {
+        path: "Login",
+        name: "Login",
+        component: () => import(`@/views/auth/Login.vue`),
+        meta: { title: "系统登录" },
+      },
+    ],
+  });
   ```
 
 <div style="margin-bottom: 38px;"/>
@@ -198,25 +198,27 @@ export interface BaseRoute {
   ```typescript
   /* file -> src/router.constant.ts */
 
-  import defaultRouter from '@/configure/defaultRouter'
-  import type { Route } from '@/router/generate-typing'
+  import defaultRouter from "@/configure/defaultRouter";
+  import type { Route } from "@/router/generate-typing";
 
-  interface defineRoute extends Route { sort?: number; }
+  interface defineRoute extends Route {
+    sort?: number;
+  }
 
-  export const baseRoutes: defineRoute[] = defaultRouter.constantRoutes // 基础路由
-  export const menuRoutes: defineRoute[] = defaultRouter.rootRoute.children // 菜单路由
+  export const baseRoutes: defineRoute[] = defaultRouter.constantRoutes; // 基础路由
+  export const menuRoutes: defineRoute[] = defaultRouter.rootRoute.children; // 菜单路由
 
   // 范例
   menuRoutes.push({
     sort: 1010000,
-    name: 'CustomComponent',
-    path: '/custom/CustomComponent', // -> @/views/custom/CustomComponent.vue
+    name: "CustomComponent",
+    path: "/custom/CustomComponent", // -> @/views/custom/CustomComponent.vue
     meta: {
-      icon: 'CodepenOutlined',
-      title: '自定义标题',
+      icon: "CodepenOutlined",
+      title: "自定义标题",
       hideInMenu: "Y", // 不在菜单导航栏中显示
-    }
-  })
+    },
+  });
   ```
 
 ## 定义外部路由
@@ -246,8 +248,8 @@ export interface BaseRoute {
       componentName: "ExternalLink",
       hideChildInMenu: true,
       hideInMenu: true,
-      allowCache: true // 实践中，发现 iframe 并不能做到 路由缓存
-    }
+      allowCache: true, // 实践中，发现 iframe 并不能做到 路由缓存
+    },
   };
   ```
 
@@ -267,8 +269,8 @@ export interface BaseRoute {
     path: "/external/link",
     query: {
       title: "掘金首页",
-      from: "https://juejin.cn"
-    }
+      from: "https://juejin.cn",
+    },
   });
   </script>
   ```
@@ -282,23 +284,25 @@ export interface BaseRoute {
   ```typescript
   /* file -> src/router.constant.ts */
 
-  import defaultRouter from '@/configure/defaultRouter'
-  import type { Route } from '@/router/generate-typing'
+  import defaultRouter from "@/configure/defaultRouter";
+  import type { Route } from "@/router/generate-typing";
 
-  interface defineRoute extends Route { sort?: number; }
+  interface defineRoute extends Route {
+    sort?: number;
+  }
 
-  export const baseRoutes: defineRoute[] = defaultRouter.constantRoutes // 基础路由
-  export const menuRoutes: defineRoute[] = defaultRouter.rootRoute.children // 菜单路由
+  export const baseRoutes: defineRoute[] = defaultRouter.constantRoutes; // 基础路由
+  export const menuRoutes: defineRoute[] = defaultRouter.rootRoute.children; // 菜单路由
 
   // 范例: 菜单导航栏 -> 点击 -> 新建标签页 -> 掘金首页
   menuRoutes.push({
     sort: 1010000,
-    name: '掘金',
-    path: 'https://juejin.cn',
-    component: 'PageFrame',
+    name: "掘金",
+    path: "https://juejin.cn",
+    component: "PageFrame",
     meta: {
-      icon: 'CodepenOutlined',
-      title: '掘金首页'
-    }
-  })
+      icon: "CodepenOutlined",
+      title: "掘金首页",
+    },
+  });
   ```

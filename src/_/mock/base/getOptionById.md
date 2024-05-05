@@ -6,7 +6,7 @@ const tag = "查询 Option 下拉框";
 const url = resolver("/base/getOptionById");
 
 worker.use(
-  http.post(url, async req => {
+  http.post(url, async (req) => {
     const body = await rester.body(req);
     const query = await rester.query(req);
     const params = await rester.params(req);
@@ -23,54 +23,54 @@ worker.use(
             {
               label: "公司部",
               parentId: "101.100.131",
-              value: "1126534161135795126"
+              value: "1126534161135795126",
             },
             {
               label: "人事部",
               parentId: "101.100.131",
-              value: "1126534161135795127"
+              value: "1126534161135795127",
             },
             {
               label: "财务部",
               parentId: "101.100.131",
-              value: "1126534161135795128"
+              value: "1126534161135795128",
             },
             {
               label: "市场部",
               parentId: "101.100.131",
-              value: "1126534161135795129"
+              value: "1126534161135795129",
             },
             {
               label: "运维部",
               parentId: "101.100.131",
-              value: "1126534161135795130"
+              value: "1126534161135795130",
             },
             {
               label: "系统部",
               parentId: "101.100.131",
-              value: "1126534161135795131"
+              value: "1126534161135795131",
             },
             {
               label: "软件部",
               parentId: "101.100.131",
-              value: "1126534161135795132"
+              value: "1126534161135795132",
             },
             {
               label: "大数据中心",
               parentId: "101.100.131",
-              value: "1126534161135795133"
+              value: "1126534161135795133",
             },
             {
               label: "技术中心",
               parentId: "101.100.131",
-              value: "1126534161135795134"
+              value: "1126534161135795134",
             },
             {
               label: "研发中心",
               parentId: "101.100.131",
-              value: "1126534161135795135"
-            }
-          ]
+              value: "1126534161135795135",
+            },
+          ],
         };
         break;
       }
@@ -78,13 +78,13 @@ worker.use(
         resource = {
           code: "0000",
           message: null,
-          result: []
+          result: [],
         };
       }
     }
 
     // 打印日志 (浏览器端)
-    printer(log => {
+    printer((log) => {
       log("[body] - ", body);
       log("[query] - ", query);
       log("[params] - ", params);

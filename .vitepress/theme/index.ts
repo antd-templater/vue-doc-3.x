@@ -10,5 +10,5 @@ export default {
   Layout: () => h(DefaultTheme.Layout),
   enhanceApp({ app }) {
     app.component('PreRedirect', defineClientComponent(() => import('../preset/pre-redirect.vue')))
-  }
+  },
 } satisfies Theme

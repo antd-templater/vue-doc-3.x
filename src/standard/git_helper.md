@@ -43,7 +43,7 @@ aside: false
  * https://github.com/linpengteng/cz-message-helper
  */
 module.exports = {
-  language: "cn" // 支持 en | cn
+  language: "cn", // 支持 en | cn
 };
 ```
 
@@ -55,7 +55,6 @@ git add .
 
 # 使用 cz-message-helper
 git cz
-
 ```
 
 [了解更多](https://github.com/linpengteng/cz-message-helper)

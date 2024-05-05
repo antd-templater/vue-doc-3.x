@@ -6,7 +6,7 @@ const tag = "分页查询用户列表";
 const url = resolver("/user/getUserInfoList");
 
 worker.use(
-  http.post(url, async req => {
+  http.post(url, async (req) => {
     const body = await rester.body(req);
     const query = await rester.query(req);
     const params = await rester.params(req);
@@ -29,7 +29,7 @@ worker.use(
             deptId: "1126534161135795132",
             roleId: ["27442970747734159"],
             postName: "系统管理",
-            activity: "Y"
+            activity: "Y",
           },
           {
             userNo: "lin",
@@ -43,18 +43,18 @@ worker.use(
             deptId: "1126534161135795132",
             roleId: ["27442970747734159"],
             postName: "系统管理",
-            activity: "Y"
-          }
+            activity: "Y",
+          },
         ],
         pageNo: 1,
         pageSize: 20,
         totalSize: 2,
-        totalPage: 1
-      }
+        totalPage: 1,
+      },
     };
 
     // 打印日志 (浏览器端)
-    printer(log => {
+    printer((log) => {
       log("[body] - ", body);
       log("[query] - ", query);
       log("[params] - ", params);

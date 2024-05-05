@@ -6,7 +6,7 @@ const tag = "获取组织 Tree 列表";
 const url = resolver("/organize/getOrganizeInfoTree");
 
 worker.use(
-  http.post(url, async req => {
+  http.post(url, async (req) => {
     const body = await rester.body(req);
     const query = await rester.query(req);
     const params = await rester.params(req);
@@ -25,9 +25,9 @@ worker.use(
               isOrg: "Y",
               isLeaf: false,
               title: "浙大远疆投资集团有限公司",
-              orgShortName: "集团公司"
-            }
-          ]
+              orgShortName: "集团公司",
+            },
+          ],
         };
         break;
       }
@@ -41,9 +41,9 @@ worker.use(
               isOrg: "Y",
               isLeaf: false,
               title: "港运信息有限公司",
-              orgShortName: "港运公司"
-            }
-          ]
+              orgShortName: "港运公司",
+            },
+          ],
         };
         break;
       }
@@ -57,16 +57,16 @@ worker.use(
               isOrg: "Y",
               isLeaf: true,
               title: "北仑网安通信有限公司",
-              orgShortName: "北仑网安"
+              orgShortName: "北仑网安",
             },
             {
               key: "101.100.138",
               isOrg: "Y",
               isLeaf: true,
               title: "宁财港务有限公司",
-              orgShortName: "宁财港务"
-            }
-          ]
+              orgShortName: "宁财港务",
+            },
+          ],
         };
         break;
       }
@@ -74,13 +74,13 @@ worker.use(
         resource = {
           code: "0000",
           message: null,
-          result: []
+          result: [],
         };
       }
     }
 
     // 打印日志 (浏览器端)
-    printer(log => {
+    printer((log) => {
       log("[body] - ", body);
       log("[query] - ", query);
       log("[params] - ", params);

@@ -82,7 +82,7 @@ export default {
   AppPageBase,
   AppRouterBase,
   AppRouterUseHash,
-  AppHiddenSettings
+  AppHiddenSettings,
 };
 ```
 
@@ -116,7 +116,7 @@ export default createRouter({
     return !multiTab || !keepAlive || !isAllowCache || !position
       ? { top: 0, left: 0 }
       : position;
-  }
+  },
 });
 ```
 
@@ -146,9 +146,9 @@ export default defineConfig(({ mode }) => {
         script: {
           defineModel: true,
           propsDestructure: true
-        }
-      })
-    ]
+        },
+      }),
+    ],
   };
 });
 ```

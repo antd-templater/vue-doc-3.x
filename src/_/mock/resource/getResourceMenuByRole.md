@@ -6,7 +6,7 @@ const tag = "根据角色查询菜单资源";
 const url = resolver("/resource/getResourceMenuByRole");
 
 worker.use(
-  http.post(url, async req => {
+  http.post(url, async (req) => {
     const body = await rester.body(req);
     const query = await rester.query(req);
     const params = await rester.params(req);
@@ -28,40 +28,40 @@ worker.use(
                   {
                     children: [],
                     label: "组织管理",
-                    value: "1127282136000102507"
+                    value: "1127282136000102507",
                   },
                   {
                     children: [],
                     label: "资源管理",
-                    value: "27245863256459445"
+                    value: "27245863256459445",
                   },
                   {
                     children: [],
                     label: "角色管理",
-                    value: "27245863256459495"
+                    value: "27245863256459495",
                   },
                   {
                     children: [],
                     label: "用户管理",
-                    value: "1127282136000102579"
-                  }
-                ]
-              }
-            ]
-          }
+                    value: "1127282136000102579",
+                  },
+                ],
+              },
+            ],
+          },
         ],
         treeSelect: [
           "27245863256459422",
           "1127282136000102507",
           "27245863256459445",
           "27245863256459495",
-          "1127282136000102579"
-        ]
-      }
+          "1127282136000102579",
+        ],
+      },
     };
 
     // 打印日志 (浏览器端)
-    printer(log => {
+    printer((log) => {
       log("[body] - ", body);
       log("[query] - ", query);
       log("[params] - ", params);

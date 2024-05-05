@@ -57,7 +57,7 @@ export default {
   fixedHeader: true, // 固定顶部栏导航
   fixedSidebar: true, // 固定左侧菜单栏
   fixedHeaderTab: true, // 固定导航栏页签
-  hideMixHeaderTab: true // 隐藏混合导航页签
+  hideMixHeaderTab: true, // 隐藏混合导航页签
 };
 ```
 
@@ -82,10 +82,10 @@ export default {
       path: "https://juejin.cn",
       component: "PageFrame",
       meta: {
-        title: "掘金首页"
-      }
-    }
-  ]
+        title: "掘金首页",
+      },
+    },
+  ],
 };
 ```
 

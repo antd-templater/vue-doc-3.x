@@ -122,7 +122,7 @@ const createAxiosInterceptor = (axios: AxiosInstance) => {
         Notification.error({
           duration: 1.5,
           message: "系统消息",
-          description: "请求超时"
+          description: "请求超时",
         });
         return promise;
       }
@@ -132,7 +132,7 @@ const createAxiosInterceptor = (axios: AxiosInstance) => {
         Notification.error({
           duration: 1.5,
           message: "系统消息",
-          description: message || "暂无权限"
+          description: message || "暂无权限",
         });
 
         return promise;
@@ -143,7 +143,7 @@ const createAxiosInterceptor = (axios: AxiosInstance) => {
         Notification.error({
           duration: 1.5,
           message: "系统消息",
-          description: message || (token ? "token已过期" : "暂无权限")
+          description: message || (token ? "token已过期" : "暂无权限"),
         });
 
         // 登录状态, 且Token过期, 则退出
@@ -161,12 +161,12 @@ const createAxiosInterceptor = (axios: AxiosInstance) => {
         Notification.error({
           duration: 1.5,
           message: "系统消息",
-          description: message ?? "系统异常"
+          description: message ?? "系统异常",
         });
       }
 
       return promise;
-    }
+    },
   );
 
   return axios;
@@ -208,9 +208,7 @@ type AxiosAssertResult<R, T> = R extends AxiosResponseResult
 /**
  * 创建 Axios 实例
  */
-const createAxiosInstance = <Result = AxiosResponseResult>(
-  config: AxiosDefaultConfig
-) => {
+const createAxiosInstance = <Result = AxiosResponseResult>(config: AxiosDefaultConfig) => {
   // 创建 Axios 实例
   const axios = Axios.create(config);
 
@@ -233,7 +231,7 @@ const createAxiosInstance = <Result = AxiosResponseResult>(
 export const request = createAxiosInstance({
   baseURL: "/api",
   messager: true, // 开启 Error 消息全局处理
-  timeout: 30000
+  timeout: 30000,
 });
 ```
 
@@ -244,7 +242,7 @@ export const request = createAxiosInstance({
 export const upload = createAxiosInstance<any>({
   baseURL: "/api/upload",
   responseType: "blob", // 文件流
-  timeout: 0 // 取消超时限制
+  timeout: 0, // 取消超时限制
 });
 ```
 
@@ -268,7 +266,7 @@ export function login<T = any, D = any>(data: D) {
   return request<T, D>({
     url: "/auth/login",
     method: "post",
-    data: data
+    data: data,
   });
 }
 ```
@@ -301,7 +299,7 @@ const login = async (params: Record<string, any> = {}) => {
     //
     //  {
     //    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.xxxxxxxxxxxxxxxxxx",
-    //    "data": { "name": "lin", "job": "developer" }
+    //    "data": { "name": "lin", "job": "developer" },
     //  }
 
     return res;

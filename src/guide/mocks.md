@@ -77,9 +77,9 @@ const result = {
     orgName: "北仑网安通信有限公司", // 用户所属组织 Name
     deptId: "1126534161135795132", // 用户所属部门 ID
     deptName: "软件部", // 用户所属部门 Name
-    activity: "Y" // 启用用户账号
+    activity: "Y", // 启用用户账号
   },
-  token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.xxxxxxxxxxx-xxx" // 用户 token
+  token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.xxxxxxxxxxx-xxx", // 用户 token
 };
 ```
 
@@ -110,11 +110,11 @@ const result = {
         permissionId: "ResourceManage", // 资源管理页面
         actionEntitySet: [
           { action: "add", defaultCheck: false, describe: "新增" }, // 按钮权限 - 新增 v-action:add
-          { action: "del", defaultCheck: false, describe: "删除" } // 按钮权限 - 删除 v-action:del
-        ]
-      }
-    ]
-  }
+          { action: "del", defaultCheck: false, describe: "删除" }, // 按钮权限 - 删除 v-action:del
+        ],
+      },
+    ],
+  },
 };
 ```
 
@@ -141,8 +141,8 @@ const result = {
     title: "系统管理", // 菜单 title
     hideChildInMenu: "N", // 是否隐藏子菜单
     hideInMenu: "N", // 是否隐藏当前菜单
-    allowCache: "Y" // 是否启用缓存
-  }
+    allowCache: "Y", // 是否启用缓存
+  },
 };
 ```
 
@@ -161,8 +161,8 @@ const result = {
 const result = [
   {
     label: "label", // 选项 label 文本
-    value: "value" // 选项 value 值
-  }
+    value: "value", // 选项 value 值
+  },
 ];
 ```
 
@@ -183,10 +183,10 @@ const result = [
     children: [
       {
         label: "label", // 子选项 label 文本
-        value: "value" // 子选项 value 值
-      }
-    ]
-  }
+        value: "value", // 子选项 value 值
+      },
+    ],
+  },
 ];
 ```
 
@@ -210,7 +210,7 @@ const result = {
   orgShortName: "集团公司", // 组织/部门 简称
   parentOrgId: "0", // 父组织 名称
   parentOrgName: "", // 父组织 ID
-  activity: "Y" // 启用状态
+  activity: "Y", // 启用状态
 };
 ```
 
@@ -230,8 +230,8 @@ const result = [
     isOrg: "Y", // 是组织 (组织 'Y', 部门 'N')
     isLeaf: false, // 是否为叶子结点
     title: "浙大远疆投资集团有限公司", // 组织/部门 名称
-    orgShortName: "集团公司" // 组织/部门 简称
-  }
+    orgShortName: "集团公司", // 组织/部门 简称
+  },
 ];
 ```
 
@@ -253,14 +253,14 @@ const result = {
     { label: "新增", value: "1127282136000102508" }, // 按钮权限: label -> 新增文本, value -> 新增按钮 id 值
     { label: "删除", value: "1127282136000102509" }, // 按钮权限: label -> 删除文本, value -> 删除按钮 id 值
     { label: "修改", value: "1127282136000102510" }, // 按钮权限: label -> 修改文本, value -> 修改按钮 id 值
-    { label: "查询", value: "1127282136000102511" } // 按钮权限: label -> 查询文本, value -> 查询按钮 id 值
+    { label: "查询", value: "1127282136000102511" }, // 按钮权限: label -> 查询文本, value -> 查询按钮 id 值
   ],
   selected: [
     "1127282136000102508", // 已启用 新增 按钮资源
     "1127282136000102509", // 已启用 删除 按钮资源
     "1127282136000102510", // 已启用 修改 按钮资源
-    "1127282136000102511" // 已启用 查询 按钮资源
-  ]
+    "1127282136000102511", // 已启用 查询 按钮资源
+  ],
 };
 ```
 
@@ -288,7 +288,7 @@ const result = {
   hideChildInMenu: "N", // 隐藏子菜单资源
   hideInMenu: "N", // 隐藏当前菜单资源
   allowCache: "Y", // 启用路由缓存
-  activity: "Y" // 启用菜单资源
+  activity: "Y", // 启用菜单资源
 };
 ```
 
@@ -315,19 +315,19 @@ const result = {
             { label: "组织管理", value: "1127282136000102507" },
             { label: "资源管理", value: "27245863256459445" },
             { label: "角色管理", value: "27245863256459495" },
-            { label: "用户管理", value: "1127282136000102579" }
-          ]
-        }
-      ]
-    }
+            { label: "用户管理", value: "1127282136000102579" },
+          ],
+        },
+      ],
+    },
   ],
   treeSelect: [
     "27245863256459422", // 菜单资源 - 组织管理 (已选择)
     "1127282136000102507", // 菜单资源 - 系统管理 (已选择)
     "27245863256459445", // 菜单资源 - 资源管理 (已选择)
     "27245863256459495", // 菜单资源 - 角色管理 (已选择)
-    "1127282136000102579" // 菜单资源 - 用户管理 (已选择)
-  ]
+    "1127282136000102579", // 菜单资源 - 用户管理 (已选择)
+  ],
 };
 ```
 
@@ -356,7 +356,7 @@ const result = {
   hideInMenu: "N", // 隐藏当前菜单资源
   allowCache: "Y", // 启用路由缓存
   activity: "Y", // 启用菜单资源
-  children: [] // 子菜单资源
+  children: [], // 子菜单资源
 };
 ```
 
@@ -377,7 +377,7 @@ const result = {
   roleId: "27442970747734159", // 角色 id
   roleName: "系统管理", // 角色名称
   dataFlag: "2", // 角色数据范围 (0 -> 用户级, 1 -> 部门级, 2 -> 公司级)
-  activity: "Y" // 角色状态 - 启用
+  activity: "Y", // 角色状态 - 启用
 };
 ```
 
@@ -396,7 +396,7 @@ const result = {
   roleId: "27442970747734159", // 角色 id
   roleName: "系统管理", // 角色名称
   dataFlag: "2", // 角色数据范围 (0 -> 用户级, 1 -> 部门级, 2 -> 公司级)
-  activity: "Y" // 角色状态 - 启用
+  activity: "Y", // 角色状态 - 启用
 };
 ```
 
@@ -424,7 +424,7 @@ const result = {
   deptName: "软件部", // 用户所属部门 Name
   roleId: ["27442970747734159"], // 用户所拥有角色组
   postName: "系统管理", // 用户职位
-  activity: "Y" // 用户账号状态
+  activity: "Y", // 用户账号状态
 };
 ```
 

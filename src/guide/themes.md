@@ -41,8 +41,8 @@ const theme = computed(() => {
       colorWarning: '#faad14', // 设置 Ant Design Vue 所有组件 warningColor -> #faad14
       colorSuccess: '#52c41a', // 设置 Ant Design Vue 所有组件 successColor -> #52c41a
       colorError: '#ff4d4f', // 设置 Ant Design Vue 所有组件 errorColor -> #ff4d4f
-      colorInfo: '#1890ff' // 设置 Ant Design Vue 所有组件 infoColor -> #1890ff
-    }
+      colorInfo: '#1890ff', // 设置 Ant Design Vue 所有组件 infoColor -> #1890ff
+    },
   };
 });
 
@@ -54,8 +54,8 @@ watchEffect(() => {
       warningColor: '#faad14',
       successColor: '#52c41a',
       errorColor: '#ff4d4f',
-      infoColor: '#1890ff'
-    }
+      infoColor: '#1890ff',
+    },
   });
 });
 </script>
@@ -81,8 +81,8 @@ export default {
     warningColor: "#faad14",
     successColor: "#52c41a",
     errorColor: "#ff4d4f",
-    infoColor: "#1890ff"
-  }
+    infoColor: "#1890ff",
+  },
 
   // ...
 };
@@ -97,36 +97,36 @@ export default {
 export default [
   {
     name: "极客蓝",
-    color: "#4557ff"
+    color: "#4557ff",
   },
   {
     name: "拂晓蓝",
-    color: "#1890ff"
+    color: "#1890ff",
   },
   {
     name: "薄暮",
-    color: "#f5222d"
+    color: "#f5222d",
   },
   {
     name: "火山",
-    color: "#fa541c"
+    color: "#fa541c",
   },
   {
     name: "日暮",
-    color: "#faad14"
+    color: "#faad14",
   },
   {
     name: "明青",
-    color: "#13c2c2"
+    color: "#13c2c2",
   },
   {
     name: "极光绿",
-    color: "#52c41a"
+    color: "#52c41a",
   },
   {
     name: "酱紫",
-    color: "#722ed1"
-  }
+    color: "#722ed1",
+  },
 ];
 ```
 
@@ -144,7 +144,7 @@ export default defineStore("app", () => {
     warningColor: defaultSettings.themeColor.warningColor,
     successColor: defaultSettings.themeColor.successColor,
     errorColor: defaultSettings.themeColor.errorColor,
-    infoColor: defaultSettings.themeColor.infoColor
+    infoColor: defaultSettings.themeColor.infoColor,
   });
 
   // ...
@@ -191,7 +191,7 @@ export default defineStore("app", () => {
     toggleWarningColor,
     toggleSuccessColor,
     toggleErrorColor,
-    toggleInfoColor
+    toggleInfoColor,
 
     // ...
   };
@@ -238,8 +238,8 @@ const computedTheme = computed(() => {
       colorWarning: appStore.warningColor,
       colorSuccess: appStore.successColor,
       colorError: appStore.errorColor,
-      colorInfo: appStore.infoColor
-    }
+      colorInfo: appStore.infoColor,
+    },
   };
 });
 
@@ -265,9 +265,9 @@ watchEffect(() => {
     :theme="{
       components: {
         Checkbox: {
-          colorPrimary: '#00b96b'
-        }
-      }
+          colorPrimary: '#00b96b',
+        },
+      },
     }"
   >
     <!-- 仅将 ACheckbox 组件主色改为 #00b96b -->
@@ -291,7 +291,7 @@ watchEffect(() => {
 <template>
   <AConfigProvider
     :theme="{
-      token: { colorPrimary: '#1677ff' }
+      token: { colorPrimary: '#1677ff' },
     }"
   >
     <!-- AButton 组件主色改为 #1677ff -->
@@ -299,7 +299,7 @@ watchEffect(() => {
 
     <AConfigProvider
       :theme="{
-        token: { colorPrimary: '#1890ff' }
+        token: { colorPrimary: '#1890ff' },
       }"
     >
       <!-- AButton 组件主色改为 #1890ff -->

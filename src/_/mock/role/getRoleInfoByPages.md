@@ -6,7 +6,7 @@ const tag = "分页获取角色列表";
 const url = resolver("/role/getRoleInfoByPages");
 
 worker.use(
-  http.post(url, async req => {
+  http.post(url, async (req) => {
     const body = await rester.body(req);
     const query = await rester.query(req);
     const params = await rester.params(req);
@@ -22,18 +22,18 @@ worker.use(
             roleId: "27442970747734159",
             roleName: "系统管理",
             dataFlag: "2",
-            activity: "Y"
-          }
+            activity: "Y",
+          },
         ],
         pageNo: 1,
         pageSize: 20,
         totalSize: 1,
-        totalPage: 1
-      }
+        totalPage: 1,
+      },
     };
 
     // 打印日志 (浏览器端)
-    printer(log => {
+    printer((log) => {
       log("[body] - ", body);
       log("[query] - ", query);
       log("[params] - ", params);
