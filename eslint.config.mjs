@@ -119,9 +119,7 @@ export default tseslint.config(
         registeredComponentsOnly: false,
         ignores: [],
       }],
-      'vue/multi-word-component-names': ['error', {
-        ignores: ['index', 'Index', 'login', 'Login'],
-      }],
+      'vue/multi-word-component-names': ['off'],
       'vue/prop-name-casing': ['error', 'camelCase'],
       'vue/v-on-event-hyphenation': ['error', 'never'],
     },

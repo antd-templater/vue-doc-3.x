@@ -34,6 +34,7 @@
     "**/*.js",
     "**/*.mjs",
     "**/*.vue",
+    ".vitepress/**/*",
   ],
   "exclude": [
     ".vitepress/cache",

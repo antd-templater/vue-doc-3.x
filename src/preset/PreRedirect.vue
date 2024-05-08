@@ -78,6 +78,9 @@ onMounted(() => {
       line-height: 54px;
       font-weight: normal;
       border-bottom: 1px solid #e5e6eb;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellips;
     }
   }
 }

@@ -8,4 +8,8 @@ export default defineConfig({
   locales: {
     root: { label: '简体中文', ...zh },
   },
+
+  vite: {
+    configFile: 'vite.config.ts',
+  },
 })

@@ -328,31 +328,31 @@ function createLibrary() {
       text: '组件库',
       items: [
         {
-          text: '<div style="display: inline-block; width: 120px;">图标组件 ------=></div>SIcon',
+          text: '<span style="display: inline-block; width: 120px;">图标组件 ------=></span>SIcon',
           link: '/library/icon',
         },
         {
-          text: '<div style="display: inline-block; width: 120px;">图标选择器 ----=></div>SIconSelect',
+          text: '<span style="display: inline-block; width: 120px;">图标选择器 ----=></span>SIconSelect',
           link: '/library/icon_select',
         },
         {
-          text: '<div style="display: inline-block; width: 120px;">单元格编辑框 --=></div>SEditCell',
+          text: '<span style="display: inline-block; width: 120px;">单元格编辑框 --=></span>SEditCell',
           link: '/library/edit_cell',
         },
         {
-          text: '<div style="display: inline-block; width: 120px;">文字省略提示 --=></div>SEllipsis',
+          text: '<span style="display: inline-block; width: 120px;">文字省略提示 --=></span>SEllipsis',
           link: '/library/ellipsis',
         },
         {
-          text: '<div style="display: inline-block; width: 120px;">表格组件 ------=></div>STable',
+          text: '<span style="display: inline-block; width: 120px;">表格组件 ------=></span>STable',
           link: '/library/table',
         },
         {
-          text: '<div style="display: inline-block; width: 120px;">表单组件 ------=></div>SForm',
+          text: '<span style="display: inline-block; width: 120px;">表单组件 ------=></span>SForm',
           link: '/library/form',
         },
         {
-          text: '<div style="display: inline-block; width: 120px;">树形组件 ------=></div>STree',
+          text: '<span style="display: inline-block; width: 120px;">树形组件 ------=></span>STree',
           link: '/library/tree',
         },
       ],
@@ -434,6 +434,7 @@ export const zh = defineConfig({
 
     outline: {
       label: '页面导航',
+      level: [2, 3],
     },
 
     lastUpdated: {
