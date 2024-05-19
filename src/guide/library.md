@@ -9,6 +9,26 @@ aside: false
 **`v3.x 版本` => 适配支持 Ant Design Vue 3.x**  
 **`v4.x 版本` => 适配支持 Ant Design Vue 4.x**
 
+## 如何安装?
+
+:::details => 适配支持 Ant Design Vue 4.x {open}
+
+```bash
+pnpm add @antd-templater/library-3.x@^4.3.0
+
+```
+
+:::
+
+:::details => 适配支持 Ant Design Vue 3.x
+
+```bash
+pnpm add @antd-templater/library-3.x@^3.0.2
+
+```
+
+:::
+
 ## 哪些组件?
 
 | 组件        | 名称         | 描述                                                                                                 |                                |
@@ -23,49 +43,11 @@ aside: false
 
 ## 如何使用?
 
-:::details 局部注册使用 {open}
+:::details 全局注册使用 {open}
 
 ::: code-group
 
-```vue:line-numbers [SIcon 组件 (范例)]
-<template>
-  <section class="form-container">
-    <SIcon type="StepBackwardOutlined" />
-  </section>
-</template>
-
-<script setup lang="ts">
-import { SIcon } from "@antd-templater/library-3.x"
-
-defineOptions({
-  name: "UsingSIcon",
-  inheritAttrs: false
-})
-</script>
-```
-
-:::
-
-:::details 全局注册使用
-
-::: code-group
-
-```vue:line-numbers [1. SIcon 组件 (范例)]
-<template>
-  <section class="form-container">
-    <SIcon type="StepBackwardOutlined">
-  </section>
-</template>
-
-<script setup lang="ts">
-defineOptions({
-  name: "UsingSIcon",
-  inheritAttrs: false
-})
-</script>
-```
-
-```typescript:line-numbers [2. 全局注册]
+```typescript:line-numbers [1. 全局注册]
 import App from "./App.vue"
 import AntdComponentPlugin from "@antd-templater/library-3.x"
 
@@ -74,7 +56,7 @@ createApp(App)
   .mount("#app")
 ```
 
-```typescript:line-numbers [3. Vite配置]
+```typescript:line-numbers [2. Vite配置]
 import { defineConfig } from 'vitest/config'
 import { AntdLibraryResolver } from '@antd-templater/library-3.x/resolver' // [!code highlight]
 import AutoImport from 'unplugin-auto-import/vite'
@@ -98,7 +80,7 @@ export default defineConfig(({ mode }) => {
 })
 ```
 
-```typescript:line-numbers [4. TS配置]
+```typescript:line-numbers [3. TS配置]
 {
   "compilerOptions": {
     "target": "ESNext",
@@ -112,7 +94,7 @@ export default defineConfig(({ mode }) => {
 }
 ```
 
-```typescript:line-numbers [5. ESLint配置]
+```typescript:line-numbers [4. ESLint配置]
 import eslint from '@eslint/js'
 import tseslint from 'typescript-eslint'
 import pluginVue from 'eslint-plugin-vue'
@@ -136,6 +118,44 @@ export default tseslint.config(
     ],
   },
 )
+```
+
+```vue:line-numbers [5. SIcon 组件 (范例)]
+<template>
+  <section class="form-container">
+    <SIcon type="StepBackwardOutlined">
+  </section>
+</template>
+
+<script setup lang="ts">
+defineOptions({
+  name: "UsingSIcon",
+  inheritAttrs: false
+})
+</script>
+```
+
+:::
+
+:::details 局部注册使用
+
+::: code-group
+
+```vue:line-numbers [SIcon 组件 (范例)]
+<template>
+  <section class="form-container">
+    <SIcon type="StepBackwardOutlined" />
+  </section>
+</template>
+
+<script setup lang="ts">
+import { SIcon } from "@antd-templater/library-3.x"
+
+defineOptions({
+  name: "UsingSIcon",
+  inheritAttrs: false
+})
+</script>
 ```
 
 :::

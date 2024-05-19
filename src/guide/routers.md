@@ -294,7 +294,7 @@ export interface BaseRoute {
   export const baseRoutes: defineRoute[] = defaultRouter.constantRoutes; // 基础路由
   export const menuRoutes: defineRoute[] = defaultRouter.rootRoute.children; // 菜单路由
 
-  // 范例: 菜单导航栏 -> 点击 -> 新建标签页 -> 掘金首页
+  // 范例: 菜单导航栏 -> 点击 -> 新建标签页 -> 加载掘金首页
   menuRoutes.push({
     sort: 1010000,
     name: "掘金",

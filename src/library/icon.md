@@ -6,8 +6,8 @@
 h3[hide] {
   width: 100%;
   height: 0;
-  padding: 0;
   margin: 0;
+  padding: 0;
   overflow: hidden;
   border: none;
 }

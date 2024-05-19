@@ -34,7 +34,7 @@ aside: false
 - Pnpm 版本: `>=7`
 - Node 版本: `^18.18.0 || ^20.9.0 || >=21.1.0`
 
-## 如何使用?
+## 如何使用
 
 ::: code-group
 
@@ -63,6 +63,22 @@ aside: false
   pnpm preview
 
 ```
+
+:::
+
+## 注意事项
+
+:::details 建议使用 VSCode 编辑器 {open}
+
+1. Antd-Templater 预设了项目级 VSCode 配置，提供并支持统一的代码风格和格式化。
+2. Antd-Templater 使用了 ESLint9.x 版本，似乎在 WebStorm 编辑器中不能很好的工作。
+
+:::
+
+:::details 建议配置 VSCode 扩展插件 {open}
+
+1. 禁用 -> 适用于 Vue2 项目的 `Vetur` 插件，它不兼容 Vue3 项目，使用会有错误信息。
+2. 启用 -> 适用于 Vue3 项目的 `Vue - Official` 插件, 它提供了很好的 TS 智能提示。
 
 :::
 

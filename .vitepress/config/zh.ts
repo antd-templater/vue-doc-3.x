@@ -66,8 +66,12 @@ function createGuide() {
               link: '/guide/introduction#开发环境',
             },
             {
-              text: '如何使用?',
+              text: '如何使用',
               link: '/guide/introduction#如何使用',
+            },
+            {
+              text: '注意事项',
+              link: '/guide/introduction#注意事项',
             },
             {
               text: '游览器支持',
@@ -223,6 +227,10 @@ function createGuide() {
       link: '/guide/library',
       collapsed: true,
       items: [
+        {
+          text: '- 如何安装?',
+          link: '/guide/library#如何安装',
+        },
         {
           text: '- 哪些组件?',
           link: '/guide/library#哪些组件',

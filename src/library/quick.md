@@ -11,7 +11,7 @@ aside: false
 :::details => 适配支持 Ant Design Vue 4.x {open}
 
 ```bash
-pnpm add @antd-templater/library-3.x@^4.2.1
+pnpm add @antd-templater/library-3.x@^4.3.0
 
 ```
 
@@ -175,7 +175,7 @@ const groups = formGroupsDefiner([
 
 :::
 
-## 提示和辅助
+## 提示和辅助 Definer
 
 在 **SForm 范例** 中，我们为了在定义 `groups` 时有良好的 TS 支持和提示，手动导入并使用 `formGroupsDefiner` 辅助。但能否自动按需导入呢？答案是可以的，需要配置如下:
 
@@ -249,7 +249,7 @@ export default defineConfig(() => {
 
 :::
 
-## 有哪些 Definer
+## 提供哪些 Definer?
 
 ::: details `@antd-templater/library-3.x` (only v4.x+) {open}
 
@@ -278,13 +278,6 @@ export default defineConfig(() => {
 - tableCustomFooterCellRenderDefiner
 ```
 
-```md [SForm]
-- formValidator
-- formGridDefiner
-- formRulesDefiner
-- formGroupsDefiner
-```
-
 ```md [STree]
 - treeDataDefiner
 - treeLoadDataDefiner
@@ -294,6 +287,17 @@ export default defineConfig(() => {
 - treeEmitChangeDefiner
 - treeDropHandlerDefiner
 - treeReplaceFieldsDefiner
+```
+
+```md [SForm]
+- formValidator
+- formGridDefiner
+- formRulesDefiner
+- formGroupsDefiner
+```
+
+```md [SIconSelect]
+- iconOptionsDefiner
 ```
 
 :::
