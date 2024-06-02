@@ -12,12 +12,14 @@ h3[hide] {
   border: none;
 }
 
-h3 + table {
+h3 + table,
+h3 ~ details > table {
   display: table;
   width: 100%;
 }
 
-h3 + table tr {
+h3 + table tr,
+h3 ~ details > table tr {
   background-color: var(--vp-c-bg) !important;
 }
 </style>

@@ -13,6 +13,15 @@ const flatArray = options => {
 
 export default tseslint.config(
   {
+    ignores: [
+      'components.d.ts',
+      'auto-imports.d.ts',
+      'node_modules/**/*',
+      '.vitepress/dist/**/*',
+      '.vitepress/cache/**/*',
+    ],
+  },
+  {
     files: [
       '**/*.vue',
       '**/*.mts',
@@ -37,6 +46,9 @@ export default tseslint.config(
       ...flatArray(pluginVue.configs['flat/recommended']),
       ...flatArray(templater.configs['flat/recommended']),
     ],
+    linterOptions: {
+      reportUnusedDisableDirectives: false,
+    },
     languageOptions: {
       parser: vueParser,
       parserOptions: {

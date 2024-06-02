@@ -7,6 +7,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AButton: typeof import('ant-design-vue/es')['Button']
     ASpace: typeof import('ant-design-vue/es')['Space']
     ATooltip: typeof import('ant-design-vue/es')['Tooltip']
     CheckCircleOutlined: typeof import('@ant-design/icons-vue')['CheckCircleOutlined']
