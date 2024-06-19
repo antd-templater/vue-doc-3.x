@@ -60,7 +60,6 @@ declare global {
   const storeToRefs: typeof import('pinia')['storeToRefs']
   const tableColumnsDefiner: typeof import('@antd-templater/library-3.x')['tableColumnsDefiner']
   const tableCustomBodyerCellRenderDefiner: typeof import('@antd-templater/library-3.x')['tableCustomBodyerCellRenderDefiner']
-  const tableCustomBodyerRowAttrsDefiner: typeof import('@antd-templater/library-3.x')['tableCustomBodyerRowAttrsDefiner']
   const tableCustomBodyerRowStatesDefiner: typeof import('@antd-templater/library-3.x')['tableCustomBodyerRowStatesDefiner']
   const tableCustomFooterCellRenderDefiner: typeof import('@antd-templater/library-3.x')['tableCustomFooterCellRenderDefiner']
   const tableLoadDataDefiner: typeof import('@antd-templater/library-3.x')['tableLoadDataDefiner']

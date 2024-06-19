@@ -210,16 +210,3 @@ const fieldNames = {
   value: 'value',
 }
 </script>
-
-<style lang="less" scoped>
-/* 重置表格样式，消除 vitepress 样式 影响 */
-:deep {
-  table,
-  table th,
-  table td {
-    border: none;
-    padding: 0;
-    margin: 0;
-  }
-}
-</style>

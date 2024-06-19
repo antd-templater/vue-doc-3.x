@@ -182,6 +182,21 @@ const $codeRunner = ref<HTMLElement | null>(null)
       left: 22px;
       top: 0;
     }
+
+    :deep {
+      table,
+      table th,
+      table td {
+        border: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      ul li + li {
+        padding: 0;
+        margin: 0;
+      }
+    }
   }
 
   & > .runner-control {
