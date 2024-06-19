@@ -1,22 +1,25 @@
 <template>
-  <div class="code-runner-container">
-    <div class="code-runner-title">
+  <div
+    ref="$codeRunner"
+    class="code-runner"
+  >
+    <div class="runner-title">
       <div class="text">
         <slot name="title" />
       </div>
     </div>
 
-    <div class="code-runner-refer">
+    <div class="runner-refer">
       <div class="text">
         <slot name="refer" />
       </div>
     </div>
 
-    <div class="code-runner-viewer">
+    <div class="runner-viewer">
       <slot name="viewer" />
     </div>
 
-    <div class="code-runner-control">
+    <div class="runner-control">
       <div class="buttons">
         <ATooltip
           :open="visible"
@@ -83,13 +86,30 @@ const trigger = (type: string) => {
   }
 }
 
+onMounted(() => {
+  if ($codeRunner.value instanceof HTMLElement) {
+    const $runner = $codeRunner.value
+    const $parent = $runner.closest('[code-runner]')
+
+    const callback = (event: Event) => {
+      const isCodeRunner = event.target instanceof HTMLElement && event.target.hasAttribute('code-runner')
+      const isHaveStyle = event.target instanceof HTMLElement && event.target.getAttribute('style')
+      isCodeRunner && isHaveStyle && event.target.removeAttribute('style')
+      $parent?.removeEventListener('mouseenter', callback)
+    }
+
+    $parent?.addEventListener('mouseenter', callback)
+  }
+})
+
 const visible = ref(false)
 const collapse = ref(true)
 const $codeViewer = ref<any>(null)
+const $codeRunner = ref<HTMLElement | null>(null)
 </script>
 
 <style lang="less" scoped>
-.code-runner-container {
+.code-runner {
   width: 100%;
   height: auto;
   margin: 30px 0 50px;
@@ -99,7 +119,7 @@ const $codeViewer = ref<any>(null)
   box-sizing: border-box;
   position: relative;
 
-  & > .code-runner-title {
+  & > .runner-title {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -126,7 +146,7 @@ const $codeViewer = ref<any>(null)
     }
   }
 
-  & > .code-runner-refer {
+  & > .runner-refer {
     width: 100%;
     height: auto;
     padding: 0 24px 15px;
@@ -136,7 +156,7 @@ const $codeViewer = ref<any>(null)
       padding: 1px;
       color: #606266;
       font-size: 14px;
-      line-height: 1.5;
+      line-height: 1.8;
 
       h1, h2, h3, h4, h5, h6, li, p {
         line-height: inherit;
@@ -145,7 +165,7 @@ const $codeViewer = ref<any>(null)
     }
   }
 
-  & > .code-runner-viewer {
+  & > .runner-viewer {
     display: block;
     width: 100%;
     height: auto;
@@ -164,7 +184,7 @@ const $codeViewer = ref<any>(null)
     }
   }
 
-  & > .code-runner-control {
+  & > .runner-control {
     display: block;
     width: 100%;
     height: auto;

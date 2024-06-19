@@ -10,13 +10,21 @@
 -> SEditCellDatePicker
 
 <style lang="less" scoped>
-h3[hide] {
+[h3-container] {
   width: 100%;
   height: 0;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  border: none;
+  position: relative;
+
+  h3 {
+    width: 100%;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+    position: absolute;
+    top: 60px;
+  }
 }
 
 h3 + table,
@@ -32,61 +40,75 @@ h3 ~ details > table tr {
 </style>
 
 <script setup lang="ts">
-  import Input from '@/library/editCell/Input.md'
-  import Select from '@/library/editCell/Select.md'
-  import Textarea from '@/library/editCell/Textarea.md'
-  import SelectIcon from '@/library/editCell/SelectIcon.md'
-  import TreeSelect from '@/library/editCell/TreeSelect.md'
-  import DatePicker from '@/library/editCell/DatePicker.md'
-  import UseInSTable from '@/library/editCell/UseInSTable.md'
+import Input from '@/library/editCell/Input.md'
+import Select from '@/library/editCell/Select.md'
+import Textarea from '@/library/editCell/Textarea.md'
+import SelectIcon from '@/library/editCell/SelectIcon.md'
+import TreeSelect from '@/library/editCell/TreeSelect.md'
+import DatePicker from '@/library/editCell/DatePicker.md'
+import UseInSTable from '@/library/editCell/UseInSTable.md'
 </script>
 
 ## 演示
 
-<div style="min-height: 368px;">
-  <h3 id="Input 输入框" hide>Input 输入框</h3>
+<div code-runner style="height: 373px;">
+  <div h3-container>
+    <h3 id="Input 输入框">Input 输入框</h3>
+  </div>
   <div style="padding: 1px;">
     <Input/>
   </div>
 </div>
 
-<div style="min-height: 368px;">
-  <h3 id="Select 选择框" hide>Select 选择框</h3>
+<div code-runner style="height: 373px;">
+  <div h3-container>
+    <h3 id="Select 选择框">Select 选择框</h3>
+  </div>
   <div style="padding: 1px;">
     <Select/>
   </div>
 </div>
 
-<div style="min-height: 368px;">
-  <h3 id="Textarea 文本框" hide>Textarea 文本框</h3>
+<div code-runner style="height: 374px;">
+  <div h3-container>
+    <h3 id="Textarea 文本框">Textarea 文本框</h3>
+  </div>
   <div style="padding: 1px;">
     <Textarea/>
   </div>
 </div>
 
-<div style="min-height: 368px;">
-  <h3 id="SelectIcon 选择框" hide>SelectIcon 选择框</h3>
+<div code-runner style="height: 373px;">
+  <div h3-container>
+    <h3 id="SelectIcon 选择框">SelectIcon 选择框</h3>
+  </div>
   <div style="padding: 1px;">
     <SelectIcon/>
   </div>
 </div>
 
-<div style="min-height: 368px;">
-  <h3 id="TreeSelect 选择框" hide>TreeSelect 选择框</h3>
+<div code-runner style="height: 373px;">
+  <div h3-container>
+    <h3 id="TreeSelect 选择框">TreeSelect 选择框</h3>
+  </div>
   <div style="padding: 1px;">
     <TreeSelect/>
   </div>
 </div>
 
-<div style="min-height: 368px;">
-  <h3 id="DatePicker 日期选择框" hide>DatePicker 日期选择框</h3>
+<div code-runner style="height: 373px;">
+  <div h3-container>
+    <h3 id="DatePicker 日期选择框">DatePicker 日期选择框</h3>
+  </div>
   <div style="padding: 1px;">
     <DatePicker/>
   </div>
 </div>
 
-<div style="min-height: 374px">
-  <h3 id="With STable 表格单元格编辑" hide>With STable 表格单元格编辑</h3>
+<div code-runner style="height: 379px">
+  <div h3-container>
+    <h3 id="With STable 表格单元格编辑">With STable 表格单元格编辑</h3>
+  </div>
   <div style="padding: 1px;">
     <UseInSTable/>
   </div>

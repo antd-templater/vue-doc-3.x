@@ -3,13 +3,21 @@
 基于 `SIcon` 和 `ASelect` 封装，默认使用 `@ant-design/icons-vue` 图标，也支持自定义选项
 
 <style lang="less" scoped>
-h3[hide] {
+[h3-container] {
   width: 100%;
   height: 0;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  border: none;
+  position: relative;
+
+  h3 {
+    width: 100%;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+    position: absolute;
+    top: 60px;
+  }
 }
 
 h3 + table,
@@ -25,29 +33,35 @@ h3 ~ details > table tr {
 </style>
 
 <script setup lang="ts">
-  import Base from '@/library/iconSelect/Base.md'
-  import Custom from '@/library/iconSelect/Custom.md'
-  import Iconfont from '@/library/iconSelect/Iconfont.md'
+import Base from '@/library/iconSelect/Base.md'
+import Custom from '@/library/iconSelect/Custom.md'
+import Iconfont from '@/library/iconSelect/Iconfont.md'
 </script>
 
 ## 演示
 
-<div style="min-height: 416px">
-  <h3 id="基本用法" hide>基本用法</h3>
+<div code-runner style="height: 428px">
+  <div h3-container>
+    <h3 id="基本用法">基本用法</h3>
+  </div>
   <div style="padding: 1px;">
     <Base/>
   </div>
 </div>
 
-<div style="min-height: 416px">
-  <h3 id="支持 iconfont" hide>支持 iconfont</h3>
+<div code-runner style="height: 428px">
+  <div h3-container>
+    <h3 id="支持 iconfont">支持 iconfont</h3>
+  </div>
   <div style="padding: 1px;">
     <Iconfont/>
   </div>
 </div>
 
-<div style="min-height: 416px">
-  <h3 id="自定义 Icons" hide>自定义 Icons</h3>
+<div code-runner style="height: 428px">
+  <div h3-container>
+    <h3 id="自定义 Icons">自定义 Icons</h3>
+  </div>
   <div style="padding: 1px;">
     <Custom/>
   </div>

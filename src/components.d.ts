@@ -8,9 +8,16 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AButton: typeof import('ant-design-vue/es')['Button']
+    ASelect: typeof import('ant-design-vue/es')['Select']
     ASpace: typeof import('ant-design-vue/es')['Space']
+    ASwitch: typeof import('ant-design-vue/es')['Switch']
     ATooltip: typeof import('ant-design-vue/es')['Tooltip']
     CheckCircleOutlined: typeof import('@ant-design/icons-vue')['CheckCircleOutlined']
+    CheckOutlined: typeof import('@ant-design/icons-vue')['CheckOutlined']
+    CloseOutlined: typeof import('@ant-design/icons-vue')['CloseOutlined']
+    EditOutlined: typeof import('@ant-design/icons-vue')['EditOutlined']
+    FormOutlined: typeof import('@ant-design/icons-vue')['FormOutlined']
+    PlusOutlined: typeof import('@ant-design/icons-vue')['PlusOutlined']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

@@ -37,8 +37,9 @@ export const shared = defineConfig({
     },
   },
 
-  appearance: false,
+  ignoreDeadLinks: true,
   lastUpdated: true,
+  appearance: false,
   cleanUrls: false,
   srcDir: src,
   base: base,

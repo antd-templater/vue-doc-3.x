@@ -2,6 +2,7 @@
   <ASpace
     :size="10"
     :wrap="true"
+    style="margin: 0"
     direction="vertical"
   >
     <div class="title">

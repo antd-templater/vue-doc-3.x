@@ -3,15 +3,22 @@
 基于 ATooltip 封装，支持实时计算内容是否超出父元素边界，是否文字省略和 Tooltip 提示
 
 <style lang="less" scoped>
-h3[hide] {
+[h3-container] {
   width: 100%;
   height: 0;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  border: none;
-}
+  position: relative;
 
+  h3 {
+    width: 100%;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+    position: absolute;
+    top: 60px;
+  }
+}
 
 h3 + table,
 h3 ~ details > table {
@@ -26,29 +33,35 @@ h3 ~ details > table tr {
 </style>
 
 <script setup lang="ts">
-  import Base from '@/library/ellipsis/Base.md'
-  import Title from '@/library/ellipsis/Title.md'
-  import Trigger from '@/library/ellipsis/Trigger.md'
+import Base from '@/library/ellipsis/Base.md'
+import Title from '@/library/ellipsis/Title.md'
+import Trigger from '@/library/ellipsis/Trigger.md'
 </script>
 
 ## 演示
 
-<div style="min-height: 388px">
-  <h3 id="基本用法" hide>基本用法</h3>
+<div code-runner style="height: 393px">
+  <div h3-container>
+    <h3 id="基本用法">基本用法</h3>
+  </div>
   <div style="padding: 1px;">
     <Base/>
   </div>
 </div>
 
-<div style="min-height: 388px">
-  <h3 id="自定义 title" hide>自定义 title</h3>
+<div code-runner style="height: 393px">
+  <div h3-container>
+    <h3 id="自定义 title">自定义 title</h3>
+  </div>
   <div style="padding: 1px;">
     <Title/>
   </div>
 </div>
 
-<div style="min-height: 388px">
-  <h3 id="打开方式 trigger" hide>打开方式 trigger</h3>
+<div code-runner style="height: 393px">
+  <div h3-container>
+    <h3 id="打开方式 trigger">打开方式 trigger</h3>
+  </div>
   <div style="padding: 1px;">
     <Trigger/>
   </div>

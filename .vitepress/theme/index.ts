@@ -1,8 +1,8 @@
 import { h } from 'vue'
 import { Theme } from 'vitepress'
-import { defineAsyncComponent } from 'vue'
 import { defineClientComponent } from 'vitepress'
 import AntdComponentPlugin from '@antd-templater/library-3.x'
+import PresetCodeRunner from '@/preset/CodeRunner.vue'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 
@@ -11,7 +11,7 @@ export default {
   Layout: () => h(DefaultTheme.Layout),
   enhanceApp({ app }) {
     app.component('PreRedirect', defineClientComponent(() => import('@/preset/PreRedirect.vue')))
-    app.component('CodeRunner', defineAsyncComponent(() => import('@/preset/CodeRunner.vue')))
+    app.component('CodeRunner', PresetCodeRunner)
     app.use(AntdComponentPlugin)
   },
 } satisfies Theme
