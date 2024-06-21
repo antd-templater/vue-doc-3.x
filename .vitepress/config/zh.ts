@@ -36,7 +36,7 @@ function createNav() {
       items: [
         {
           text: 'Vue2.x (待定)',
-          link: `/redirect?https://antd-templater.\${domain}.io/docs/vue2.x`,
+          link: `/redirect?antd-templater.\${domain}.io/docs/vue2.x`,
           target: '_blank',
         },
       ],
@@ -74,8 +74,8 @@ function createGuide() {
               link: '/guide/introduction#注意事项',
             },
             {
-              text: '游览器支持',
-              link: '/guide/introduction#游览器支持',
+              text: '浏览器支持',
+              link: '/guide/introduction#浏览器支持',
             },
           ],
         },

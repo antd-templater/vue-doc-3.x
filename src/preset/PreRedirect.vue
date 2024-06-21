@@ -23,11 +23,15 @@ const redirect = computed(() => {
   const domain = /^(.+\.)?gitee\..+$/i.test(host) ? 'gitee' : 'github'
   const regexp = /\$\{domain\}/gi
 
-  return (
+  const route = (
     search.includes('${domain}')
       ? search.slice(1).replace(regexp, domain)
       : search.slice(1)
   )
+
+  return !(/^https?:\/\//).test(route)
+    ? `https://${route}`
+    : route
 })
 
 onMounted(() => {

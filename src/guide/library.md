@@ -14,7 +14,7 @@ aside: false
 :::details => 适配支持 Ant Design Vue 4.x {open}
 
 ```bash
-pnpm add @antd-templater/library-3.x@^4.3.8
+pnpm add @antd-templater/library-3.x@^4.3.9
 
 ```
 

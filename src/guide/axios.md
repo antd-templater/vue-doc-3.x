@@ -26,7 +26,7 @@ const createAxiosInterceptor = (axios: AxiosInstance) => {
 
     // 如果 headers.token 为空，且 user.token 不为空
     if (user.token && !headers.token && headers.token !== null) {
-      headers.token = `Bearer ${user.token}`;
+      headers.token = `${user.token}`;
     }
 
     // 启用 mock service woker (Using in public/msw.js)
@@ -104,17 +104,17 @@ const createAxiosInterceptor = (axios: AxiosInstance) => {
     response => response,
     error => {
       let status = 500 as any;
-      let message = "" as any;
+      let message = null as any;
       let messager = true as boolean;
       const token = useUserStore().token;
       const logout = useUserStore().logout;
       const promise = Promise.reject(error);
 
       try {
-        status = error.status || status;
-        status = error.data?.code || status;
-        message = error.data?.message || null;
-        messager = error.config?.messager !== false;
+        status = error.response?.status || error.status || status;
+        status = error.response?.data?.code || error.data?.code || status;
+        message = error.response?.data?.message || error.data?.message || null;
+        messager = (error.response?.config?.messager ?? error.config?.messager) !== false
       } catch (e) {}
 
       // 网络超时
@@ -242,6 +242,7 @@ export const request = createAxiosInstance({
 export const upload = createAxiosInstance<any>({
   baseURL: "/api/upload",
   responseType: "blob", // 文件流
+  messager: false, // 关闭 Error 消息全局处理
   timeout: 0, // 取消超时限制
 });
 ```

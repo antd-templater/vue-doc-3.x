@@ -82,6 +82,6 @@ aside: false
 
 :::
 
-## 游览器支持
+## 浏览器支持
 
 <!--@include: ../_/guide/browsers.md-->

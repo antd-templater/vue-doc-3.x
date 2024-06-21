@@ -1,7 +1,3 @@
----
-aside: false
----
-
 # 快速开始
 
 基于 `Ant Design Vue` 部分组件的封装和扩展，提供更适配桌面端的高阶组件
@@ -11,7 +7,7 @@ aside: false
 :::details => 适配支持 Ant Design Vue 4.x {open}
 
 ```bash
-pnpm add @antd-templater/library-3.x@^4.3.8
+pnpm add @antd-templater/library-3.x@^4.3.9
 
 ```
 

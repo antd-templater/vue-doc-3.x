@@ -46,7 +46,7 @@ aside: false
   "editor.formatOnPaste": true,
   "editor.detectIndentation": false,
   "editor.renderControlCharacters": true,
-  "eslint.experimental.useFlatConfig": true,
+  "eslint.useFlatConfig": true,
   "eslint.format.enable": true,
   "eslint.probe": [
     "javascript",

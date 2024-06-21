@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 在线演示
-      link: /redirect?https://antd-templater.${domain}.io/preview/vue3.x
+      link: /redirect?antd-templater.${domain}.io/preview/vue3.x
       target: _blank
 
     - theme: alt
@@ -18,7 +18,7 @@ hero:
 
     - theme: alt
       text: 源码仓库
-      link: /redirect?https://${domain}.com/antd-templater/template-3.x
+      link: /redirect?${domain}.com/antd-templater/template-3.x
       target: _blank
 
   image:
@@ -36,7 +36,7 @@ features:
   - title: 特性
     details: "轻量化: 仅预设基础访问页, 没有冗余 Demo 页<br/>多主题: 支持亮色风格、暗色风格、暗黑风格等<br/>多布局: 侧边菜单、顶部菜单、混合菜单等导航<br>标签栏: 支持面包屑，支持多页签及其数据缓存<br/>现数据 - 由 `msw` + 预设的 mock data 提供<br/>"
 
-  - title: '组件库 <a href="./library/guide.html" style="color: #bd34fe;">更多</a>'
+  - title: '组件库 <a href="./library/quick.html" style="color: #bd34fe;">更多</a>'
     details: "SForm: 根据配置选项渲染各表单组件<br/>SEditCell: 单元格编辑 (输入框、下拉框等)<br/>STable: 多功能表格组件 (并非 ATable 的封装)<br/>STree: 对 ATree 封装, 扩展 link 模式和新 API <br/>SIcon: 根据 type 渲染 Icon, 也支持 iconfont<br/>"
 
   - title: '开发规范 <a href="./standard/develop_guide.html" style="color: #bd34fe;">详情</a>'
