@@ -225,7 +225,7 @@ export interface BaseRoute {
 
 外部路由即可以加载 **第三方页面** 的路由，在上个章节中提到 **Ant-Templater** 支持在基础布局 (BasicLayout) 中 PageFrame 加载第三方页面。
 
-<img alt="掘金" src="/route-juejin.png" style="border: solid 1px #cccccc; border-radius: 4px;">
+<img alt="掘金" src="/visit-juejin.png" style="border: solid 1px #cccccc; border-radius: 4px;">
 
 <div style="margin-bottom: 38px;"/>
 
@@ -306,3 +306,51 @@ export interface BaseRoute {
     },
   });
   ```
+
+<div style="margin-bottom: 38px;"/>
+
+- 但如果我们需要为不同账号配置访问 `外部路由` 的权限，我们则可以在 **动态路由** 中配置如下
+
+  <img alt="菜单路由 - 掘金" src="/route-juejin.png" style="border: solid 1px #cccccc; border-radius: 4px;">
+
+  ::: code-group
+
+  ```json [表单数据]
+  {
+    "sort": 1010000,
+    "path": "https://juejin.cn",
+    "icon": "CodepenOutlined",
+    "title": "掘金首页",
+    "redirect": "",
+    "parentId": "0",
+    "component": "PageFrame",
+    "resourceId": "1127282136000108899",
+    "resourceName": "JueJin",
+    "resourceType": "m",
+    "hideChildInMenu": "N",
+    "hideInMenu": "N",
+    "allowCache": "N",
+    "activity": "Y"
+  }
+  ```
+
+  ```json [ --> 菜单路由]
+  {
+    "sort": 1010000,
+    "id": "1127282136000108899",
+    "name": "JueJin",
+    "path": "https://juejin.cn",
+    "parentId": "0",
+    "component": "PageFrame",
+    "redirect": "",
+    "meta": {
+      "icon": "CodepenOutlined",
+      "title": "掘金首页",
+      "hideChildInMenu": "N",
+      "hideInMenu": "N",
+      "allowCache": "N"
+    }
+  }
+  ```
+
+  :::
