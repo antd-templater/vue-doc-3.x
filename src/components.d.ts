@@ -20,5 +20,6 @@ declare module 'vue' {
     PlusOutlined: typeof import('@ant-design/icons-vue')['PlusOutlined']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    StarFilled: typeof import('@ant-design/icons-vue')['StarFilled']
   }
 }

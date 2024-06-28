@@ -3,7 +3,7 @@
 基于 `SIcon` 和 `ASelect` 封装，默认使用 `@ant-design/icons-vue` 图标，也支持自定义选项
 
 <style lang="less" scoped>
-[h3-container] {
+[code-runner-title] {
   width: 100%;
   height: 0;
   position: relative;
@@ -19,17 +19,6 @@
     top: 60px;
   }
 }
-
-h3 + table,
-h3 ~ details > table {
-  display: table;
-  width: 100%;
-}
-
-h3 + table tr,
-h3 ~ details > table tr {
-  background-color: var(--vp-c-bg) !important;
-}
 </style>
 
 <script setup lang="ts">
@@ -41,7 +30,7 @@ import Iconfont from '@/library/iconSelect/Iconfont.md'
 ## 演示
 
 <div code-runner style="height: 428px">
-  <div h3-container>
+  <div code-runner-title>
     <h3 id="基本用法">基本用法</h3>
   </div>
   <div style="padding: 1px;">
@@ -50,7 +39,7 @@ import Iconfont from '@/library/iconSelect/Iconfont.md'
 </div>
 
 <div code-runner style="height: 428px">
-  <div h3-container>
+  <div code-runner-title>
     <h3 id="支持 iconfont">支持 iconfont</h3>
   </div>
   <div style="padding: 1px;">
@@ -59,7 +48,7 @@ import Iconfont from '@/library/iconSelect/Iconfont.md'
 </div>
 
 <div code-runner style="height: 428px">
-  <div h3-container>
+  <div code-runner-title>
     <h3 id="自定义 Icons">自定义 Icons</h3>
   </div>
   <div style="padding: 1px;">

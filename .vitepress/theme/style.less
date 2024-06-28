@@ -80,14 +80,61 @@
   }
 }
 
+/* VPDoc Container */
+
+@media (min-width: 960px) {
+  .VPDoc > .container > .content {
+    padding: 0 20px 128px;
+  }
+}
+
+@media (min-width: 375px) {
+  .VPDoc.has-aside .content > .content-container {
+    max-width: none;
+  }
+}
+
 /* Algolia */
 
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
-/* Docs table */
-.vp-doc table {
-  display: table;
-  width: 100%;
+/* VPDoc */
+.VPDoc {
+  h3 {
+    margin: 54px 0 0;
+  }
+
+  h4 {
+    margin: 42px 0 20px;
+  }
+
+  table {
+    display: table;
+    width: 100%;
+  }
+
+  h2 + h3 {
+    margin: 35px 0 0;
+  }
+
+  h3 + h4 {
+    margin: 20px 0 20px;
+  }
+
+  h3 + table,
+  h4 + table,
+  h3 ~ details > table,
+  h4 ~ details > table {
+    display: table;
+    width: 100%;
+  }
+
+  h3 + table tr,
+  h4 + table tr,
+  h3 ~ details > table tr,
+  h4 ~ details > table tr {
+    background-color: var(--vp-c-bg) !important;
+  }
 }

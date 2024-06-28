@@ -10,7 +10,7 @@
 -> SEditCellDatePicker
 
 <style lang="less" scoped>
-[h3-container] {
+[code-runner-title] {
   width: 100%;
   height: 0;
   position: relative;
@@ -25,17 +25,6 @@
     position: absolute;
     top: 60px;
   }
-}
-
-h3 + table,
-h3 ~ details > table {
-  display: table;
-  width: 100%;
-}
-
-h3 + table tr,
-h3 ~ details > table tr {
-  background-color: var(--vp-c-bg) !important;
 }
 </style>
 
@@ -52,7 +41,7 @@ import UseInSTable from '@/library/editCell/UseInSTable.md'
 ## 演示
 
 <div code-runner style="height: 373px;">
-  <div h3-container>
+  <div code-runner-title>
     <h3 id="Input 输入框">Input 输入框</h3>
   </div>
   <div style="padding: 1px;">
@@ -61,7 +50,7 @@ import UseInSTable from '@/library/editCell/UseInSTable.md'
 </div>
 
 <div code-runner style="height: 373px;">
-  <div h3-container>
+  <div code-runner-title>
     <h3 id="Select 选择框">Select 选择框</h3>
   </div>
   <div style="padding: 1px;">
@@ -70,7 +59,7 @@ import UseInSTable from '@/library/editCell/UseInSTable.md'
 </div>
 
 <div code-runner style="height: 374px;">
-  <div h3-container>
+  <div code-runner-title>
     <h3 id="Textarea 文本框">Textarea 文本框</h3>
   </div>
   <div style="padding: 1px;">
@@ -79,7 +68,7 @@ import UseInSTable from '@/library/editCell/UseInSTable.md'
 </div>
 
 <div code-runner style="height: 373px;">
-  <div h3-container>
+  <div code-runner-title>
     <h3 id="SelectIcon 选择框">SelectIcon 选择框</h3>
   </div>
   <div style="padding: 1px;">
@@ -88,7 +77,7 @@ import UseInSTable from '@/library/editCell/UseInSTable.md'
 </div>
 
 <div code-runner style="height: 373px;">
-  <div h3-container>
+  <div code-runner-title>
     <h3 id="TreeSelect 选择框">TreeSelect 选择框</h3>
   </div>
   <div style="padding: 1px;">
@@ -97,7 +86,7 @@ import UseInSTable from '@/library/editCell/UseInSTable.md'
 </div>
 
 <div code-runner style="height: 373px;">
-  <div h3-container>
+  <div code-runner-title>
     <h3 id="DatePicker 日期选择框">DatePicker 日期选择框</h3>
   </div>
   <div style="padding: 1px;">
@@ -106,7 +95,7 @@ import UseInSTable from '@/library/editCell/UseInSTable.md'
 </div>
 
 <div code-runner style="height: 379px">
-  <div h3-container>
+  <div code-runner-title>
     <h3 id="With STable 表格单元格编辑">With STable 表格单元格编辑</h3>
   </div>
   <div style="padding: 1px;">
@@ -118,7 +107,7 @@ import UseInSTable from '@/library/editCell/UseInSTable.md'
 
 ### Props
 
-::: details SEditCell {open}
+#### SEditCell (通用)
 
 | 参数                 | 说明                                            | 类型    |               默认值               |
 | :------------------- | :---------------------------------------------- | :------ | :--------------------------------: |
@@ -135,9 +124,7 @@ import UseInSTable from '@/library/editCell/UseInSTable.md'
 | **placeholder**      | 输入框/选择框 提示文本                          | string  |                 -                  |
 | **cellStyle**        | 单元框各部分样式 (详见下方 `cellStyle` 选项)    | object  |                 -                  |
 
-:::
-
-::: details SEditCellSelect
+#### SEditCellSelect
 
 | 参数                 | 说明                                          | 类型                                           |           默认值           |
 | :------------------- | :-------------------------------------------- | :--------------------------------------------- | :------------------------: |
@@ -147,17 +134,13 @@ import UseInSTable from '@/library/editCell/UseInSTable.md'
 | **fieldNames**       | 自定义节点 label、value、options 的字段       | object                                         | \{ label, value, options } |
 | **optionFilterProp** | 搜索时过滤对应的 option 属性，不支持 children | string                                         |             -              |
 
-:::
-
-::: details SEditCellTextarea
+#### SEditCellTextarea
 
 | 参数         | 说明                                                              | 类型              | 默认值 |
 | :----------- | :---------------------------------------------------------------- | :---------------- | :----: |
 | **autoSize** | 自适应内容高度，可设置 boolean 或对象 \{ minRows: 2, maxRows: 6 } | boolean \| object |   -    |
 
-:::
-
-::: details SEditCellSelectIcon
+#### SEditCellSelectIcon
 
 | 参数                 | 说明                                    | 类型                |           默认值           |
 | :------------------- | :-------------------------------------- | :------------------ | :------------------------: |
@@ -171,9 +154,7 @@ import UseInSTable from '@/library/editCell/UseInSTable.md'
 | **showSearch**       | 配置是否可搜索                          | boolean             |            true            |
 | **showArrow**        | 是否显示下拉小箭头                      | boolean             |            true            |
 
-:::
-
-::: details SEditCellTreeSelect
+#### SEditCellTreeSelect
 
 | 参数                     | 说明                                    | 类型                             |           默认值           |
 | :----------------------- | :-------------------------------------- | :------------------------------- | :------------------------: |
@@ -184,9 +165,7 @@ import UseInSTable from '@/library/editCell/UseInSTable.md'
 | **treeNodeFilterProp**   | 输入项过滤对应的 treeNode 属性          | string                           |          'value'           |
 | **treeDefaultExpandAll** | 默认展开所有节点                        | boolean                          |            true            |
 
-:::
-
-::: details SEditCellDatePicker
+#### SEditCellDatePicker
 
 | 参数              | 说明             | 类型                                                                     | 默认值 |
 | :---------------- | :--------------- | :----------------------------------------------------------------------- | :----: |
@@ -197,9 +176,7 @@ import UseInSTable from '@/library/editCell/UseInSTable.md'
 | **valueFormat**   | 绑定值的格式     | string [具体格式](https://day.js.org/docs/zh-CN/display/format)          |   -    |
 | **inputReadOnly** | 设置输入框为只读 | boolean                                                                  | false  |
 
-:::
-
-::: details 关于 cellStyle 选项
+#### 关于 cellStyle 选项
 
 | 参数             | 说明                            | 类型   | 默认值 |
 | :--------------- | :------------------------------ | :----- | :----: |
@@ -210,9 +187,9 @@ import UseInSTable from '@/library/editCell/UseInSTable.md'
 | **input**        | 设置 输入框/选择框 样式         | object |   -    |
 | **textWrapper**  | 设置 文本模式 样式              | object |   -    |
 
-:::
-
 ### Emits
+
+#### SEditCell (通用)
 
 | 事件        | 说明                                     | 类型                                        |
 | :---------- | :--------------------------------------- | :------------------------------------------ |

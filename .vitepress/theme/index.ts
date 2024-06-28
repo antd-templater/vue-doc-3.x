@@ -4,7 +4,7 @@ import { defineClientComponent } from 'vitepress'
 import AntdComponentPlugin from '@antd-templater/library-3.x'
 import PresetCodeRunner from '@/preset/CodeRunner.vue'
 import DefaultTheme from 'vitepress/theme'
-import './style.css'
+import './style.less'
 
 export default {
   extends: DefaultTheme,

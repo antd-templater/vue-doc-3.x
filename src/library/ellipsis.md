@@ -3,7 +3,7 @@
 基于 ATooltip 封装，支持实时计算内容是否超出父元素边界，是否文字省略和 Tooltip 提示
 
 <style lang="less" scoped>
-[h3-container] {
+[code-runner-title] {
   width: 100%;
   height: 0;
   position: relative;
@@ -19,17 +19,6 @@
     top: 60px;
   }
 }
-
-h3 + table,
-h3 ~ details > table {
-  display: table;
-  width: 100%;
-}
-
-h3 + table tr,
-h3 ~ details > table tr {
-  background-color: var(--vp-c-bg) !important;
-}
 </style>
 
 <script setup lang="ts">
@@ -41,7 +30,7 @@ import Trigger from '@/library/ellipsis/Trigger.md'
 ## 演示
 
 <div code-runner style="height: 393px">
-  <div h3-container>
+  <div code-runner-title>
     <h3 id="基本用法">基本用法</h3>
   </div>
   <div style="padding: 1px;">
@@ -50,7 +39,7 @@ import Trigger from '@/library/ellipsis/Trigger.md'
 </div>
 
 <div code-runner style="height: 393px">
-  <div h3-container>
+  <div code-runner-title>
     <h3 id="自定义 title">自定义 title</h3>
   </div>
   <div style="padding: 1px;">
@@ -59,7 +48,7 @@ import Trigger from '@/library/ellipsis/Trigger.md'
 </div>
 
 <div code-runner style="height: 393px">
-  <div h3-container>
+  <div code-runner-title>
     <h3 id="打开方式 trigger">打开方式 trigger</h3>
   </div>
   <div style="padding: 1px;">

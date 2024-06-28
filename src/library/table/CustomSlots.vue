@@ -20,8 +20,15 @@
 
       <template #bodyerCell="{ column, value }">
         <template v-if="column.key !== 'subject'">
-          <div style="display: flex; justify-content: center; align-items: center;">
-            <PlusOutlined style="font-size: 10px; margin-right: 2px;" />{{ value }}
+          <div style="display: inline-flex; align-items: center; width: 30px;">
+            <span style="margin-right: 3px;">
+              {{ value }}
+            </span>
+
+            <StarFilled
+              v-if="value >= 95"
+              style="font-size: 12px; color: #FFC107;"
+            />
           </div>
         </template>
       </template>

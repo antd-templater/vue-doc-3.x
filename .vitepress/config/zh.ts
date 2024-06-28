@@ -442,7 +442,7 @@ export const zh = defineConfig({
 
     outline: {
       label: '页面导航',
-      level: [2, 3],
+      level: [2, 4],
     },
 
     lastUpdated: {

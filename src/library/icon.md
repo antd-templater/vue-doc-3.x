@@ -3,7 +3,7 @@
 动态渲染 `@ant-design/icons-vue` 图标组件，也支持渲染 iconfont 图标
 
 <style lang="less" scoped>
-[h3-container] {
+[code-runner-title] {
   width: 100%;
   height: 0;
   position: relative;
@@ -19,17 +19,6 @@
     top: 60px;
   }
 }
-
-h3 + table,
-h3 ~ details > table {
-  display: table;
-  width: 100%;
-}
-
-h3 + table tr,
-h3 ~ details > table tr {
-  background-color: var(--vp-c-bg) !important;
-}
 </style>
 
 <script setup lang="ts">
@@ -41,7 +30,7 @@ import TwoToneColor from '@/library/icon/TwoToneColor.md'
 ## 演示
 
 <div code-runner style="height: 273px">
-  <div h3-container>
+  <div code-runner-title>
     <h3 id="基本用法">基本用法</h3>
   </div>
   <div style="padding: 1px;">
@@ -50,7 +39,7 @@ import TwoToneColor from '@/library/icon/TwoToneColor.md'
 </div>
 
 <div code-runner style="height: 273px">
-  <div h3-container>
+  <div code-runner-title>
     <h3 id="多色图标">多色图标</h3>
   </div>
   <div style="padding: 1px;">
@@ -59,7 +48,7 @@ import TwoToneColor from '@/library/icon/TwoToneColor.md'
 </div>
 
 <div code-runner style="height: 273px">
-  <div h3-container>
+  <div code-runner-title>
     <h3 id="支持 iconfont">支持 iconfont</h3>
   </div>
   <div style="padding: 1px;">
