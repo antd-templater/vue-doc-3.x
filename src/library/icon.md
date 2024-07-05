@@ -29,7 +29,7 @@ import TwoToneColor from '@/library/icon/TwoToneColor.md'
 
 ## 演示
 
-<div code-runner style="height: 273px">
+<div code-runner style="height: 273px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="基本用法">基本用法</h3>
   </div>
@@ -38,7 +38,7 @@ import TwoToneColor from '@/library/icon/TwoToneColor.md'
   </div>
 </div>
 
-<div code-runner style="height: 273px">
+<div code-runner style="height: 273px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="多色图标">多色图标</h3>
   </div>
@@ -47,7 +47,7 @@ import TwoToneColor from '@/library/icon/TwoToneColor.md'
   </div>
 </div>
 
-<div code-runner style="height: 273px">
+<div code-runner style="height: 273px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="支持 iconfont">支持 iconfont</h3>
   </div>

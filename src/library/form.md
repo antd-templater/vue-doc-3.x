@@ -41,7 +41,7 @@ import ComponentSlot from '@/library/form/ComponentSlot.md'
 
 ## 演示
 
-<div code-runner style="height: 398px">
+<div code-runner style="height: 398px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="基本用法">基本用法</h3>
   </div>
@@ -50,7 +50,7 @@ import ComponentSlot from '@/library/form/ComponentSlot.md'
   </div>
 </div>
 
-<div code-runner style="height: 1343px">
+<div code-runner style="height: 1343px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="表单分组">表单分组</h3>
   </div>
@@ -59,7 +59,7 @@ import ComponentSlot from '@/library/form/ComponentSlot.md'
   </div>
 </div>
 
-<div code-runner style="height: 603px">
+<div code-runner style="height: 603px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="表单校验">表单校验</h3>
   </div>
@@ -68,7 +68,7 @@ import ComponentSlot from '@/library/form/ComponentSlot.md'
   </div>
 </div>
 
-<div code-runner style="height: 531px">
+<div code-runner style="height: 531px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="自定义分组">自定义分组</h3>
   </div>
@@ -77,7 +77,7 @@ import ComponentSlot from '@/library/form/ComponentSlot.md'
   </div>
 </div>
 
-<div code-runner style="height: 607px">
+<div code-runner style="height: 607px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="自定义组件">自定义组件</h3>
   </div>

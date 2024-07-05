@@ -29,7 +29,7 @@ import Trigger from '@/library/ellipsis/Trigger.md'
 
 ## 演示
 
-<div code-runner style="height: 393px">
+<div code-runner style="height: 393px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="基本用法">基本用法</h3>
   </div>
@@ -38,7 +38,7 @@ import Trigger from '@/library/ellipsis/Trigger.md'
   </div>
 </div>
 
-<div code-runner style="height: 393px">
+<div code-runner style="height: 393px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="自定义 title">自定义 title</h3>
   </div>
@@ -47,7 +47,7 @@ import Trigger from '@/library/ellipsis/Trigger.md'
   </div>
 </div>
 
-<div code-runner style="height: 393px">
+<div code-runner style="height: 393px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="打开方式 trigger">打开方式 trigger</h3>
   </div>

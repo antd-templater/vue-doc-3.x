@@ -40,7 +40,7 @@ import UseInSTable from '@/library/editCell/UseInSTable.md'
 
 ## 演示
 
-<div code-runner style="height: 373px;">
+<div code-runner style="height: 373px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="Input 输入框">Input 输入框</h3>
   </div>
@@ -49,7 +49,7 @@ import UseInSTable from '@/library/editCell/UseInSTable.md'
   </div>
 </div>
 
-<div code-runner style="height: 373px;">
+<div code-runner style="height: 373px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="Select 选择框">Select 选择框</h3>
   </div>
@@ -58,7 +58,7 @@ import UseInSTable from '@/library/editCell/UseInSTable.md'
   </div>
 </div>
 
-<div code-runner style="height: 374px;">
+<div code-runner style="height: 374px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="Textarea 文本框">Textarea 文本框</h3>
   </div>
@@ -67,7 +67,7 @@ import UseInSTable from '@/library/editCell/UseInSTable.md'
   </div>
 </div>
 
-<div code-runner style="height: 373px;">
+<div code-runner style="height: 373px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="SelectIcon 选择框">SelectIcon 选择框</h3>
   </div>
@@ -76,7 +76,7 @@ import UseInSTable from '@/library/editCell/UseInSTable.md'
   </div>
 </div>
 
-<div code-runner style="height: 373px;">
+<div code-runner style="height: 373px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="TreeSelect 选择框">TreeSelect 选择框</h3>
   </div>
@@ -85,7 +85,7 @@ import UseInSTable from '@/library/editCell/UseInSTable.md'
   </div>
 </div>
 
-<div code-runner style="height: 373px;">
+<div code-runner style="height: 373px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="DatePicker 日期选择框">DatePicker 日期选择框</h3>
   </div>
@@ -94,7 +94,7 @@ import UseInSTable from '@/library/editCell/UseInSTable.md'
   </div>
 </div>
 
-<div code-runner style="height: 379px">
+<div code-runner style="height: 379px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="With STable 表格单元格编辑">With STable 表格单元格编辑</h3>
   </div>

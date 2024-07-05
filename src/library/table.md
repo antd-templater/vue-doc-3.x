@@ -43,7 +43,7 @@ import FixedPageTable from '@/library/table/FixedPageTable.md'
 
 ## 演示
 
-<div code-runner style="height: 466px">
+<div code-runner style="height: 466px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="基本用法">基本用法</h3>
   </div>
@@ -52,7 +52,7 @@ import FixedPageTable from '@/library/table/FixedPageTable.md'
   </div>
 </div>
 
-<div code-runner style="height: 653px">
+<div code-runner style="height: 653px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="带斑马纹表格">带斑马纹表格</h3>
   </div>
@@ -61,7 +61,7 @@ import FixedPageTable from '@/library/table/FixedPageTable.md'
   </div>
 </div>
 
-<div code-runner style="height: 549px">
+<div code-runner style="height: 549px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="带总结栏表格">带总结栏表格</h3>
   </div>
@@ -70,7 +70,7 @@ import FixedPageTable from '@/library/table/FixedPageTable.md'
   </div>
 </div>
 
-<div code-runner style="height: 599px">
+<div code-runner style="height: 599px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="表格卡槽自定义">表格卡槽自定义</h3>
   </div>
@@ -79,7 +79,7 @@ import FixedPageTable from '@/library/table/FixedPageTable.md'
   </div>
 </div>
 
-<div code-runner style="height: 654px">
+<div code-runner style="height: 654px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="远程加载数据">远程加载数据</h3>
   </div>
@@ -88,7 +88,7 @@ import FixedPageTable from '@/library/table/FixedPageTable.md'
   </div>
 </div>
 
-<div code-runner style="height: 945px">
+<div code-runner style="height: 945px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="表格列排序(多列)">表格列排序(多列)</h3>
   </div>
@@ -97,7 +97,7 @@ import FixedPageTable from '@/library/table/FixedPageTable.md'
   </div>
 </div>
 
-<div code-runner style="height: 682px">
+<div code-runner style="height: 682px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="不同尺寸的表格">不同尺寸的表格</h3>
   </div>
@@ -106,7 +106,7 @@ import FixedPageTable from '@/library/table/FixedPageTable.md'
   </div>
 </div>
 
-<div code-runner style="height: 515px">
+<div code-runner style="height: 515px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="单元格自动省略">单元格自动省略</h3>
   </div>
@@ -115,7 +115,7 @@ import FixedPageTable from '@/library/table/FixedPageTable.md'
   </div>
 </div>
 
-<div code-runner style="height: 707px">
+<div code-runner style="height: 707px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="表格分组表头">表格分组表头</h3>
   </div>
@@ -124,7 +124,7 @@ import FixedPageTable from '@/library/table/FixedPageTable.md'
   </div>
 </div>
 
-<div code-runner style="height: 551px">
+<div code-runner style="height: 551px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="表格行/列合并">表格行/列合并</h3>
   </div>
@@ -133,7 +133,7 @@ import FixedPageTable from '@/library/table/FixedPageTable.md'
   </div>
 </div>
 
-<div code-runner style="height: 570px">
+<div code-runner style="height: 570px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="表格数据源变更">表格数据源变更</h3>
   </div>
@@ -142,7 +142,7 @@ import FixedPageTable from '@/library/table/FixedPageTable.md'
   </div>
 </div>
 
-<div code-runner style="height: 992px">
+<div code-runner style="height: 992px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="固定表头和某列">固定表头和某列</h3>
   </div>
@@ -151,7 +151,7 @@ import FixedPageTable from '@/library/table/FixedPageTable.md'
   </div>
 </div>
 
-<div code-runner style="height: 956px">
+<div code-runner style="height: 956px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="随页面滚动固定表头">随页面滚动固定表头</h3>
   </div>
@@ -160,7 +160,7 @@ import FixedPageTable from '@/library/table/FixedPageTable.md'
   </div>
 </div>
 
-<div code-runner style="height: 379px">
+<div code-runner style="height: 379px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="表格单元格编辑">表格单元格编辑</h3>
   </div>
@@ -169,7 +169,7 @@ import FixedPageTable from '@/library/table/FixedPageTable.md'
   </div>
 </div>
 
-<div code-runner style="height: 739px">
+<div code-runner style="height: 739px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="表格单选/多选">表格单选/多选</h3>
   </div>
@@ -178,7 +178,7 @@ import FixedPageTable from '@/library/table/FixedPageTable.md'
   </div>
 </div>
 
-<div code-runner style="height: 1012px">
+<div code-runner style="height: 1012px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="表格树形数据">表格树形数据</h3>
   </div>
@@ -187,7 +187,7 @@ import FixedPageTable from '@/library/table/FixedPageTable.md'
   </div>
 </div>
 
-<div code-runner style="height: 651px">
+<div code-runner style="height: 651px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="表格行展开项">表格行展开项</h3>
   </div>

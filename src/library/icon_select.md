@@ -29,7 +29,7 @@ import Iconfont from '@/library/iconSelect/Iconfont.md'
 
 ## 演示
 
-<div code-runner style="height: 428px">
+<div code-runner style="height: 428px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="基本用法">基本用法</h3>
   </div>
@@ -38,7 +38,7 @@ import Iconfont from '@/library/iconSelect/Iconfont.md'
   </div>
 </div>
 
-<div code-runner style="height: 428px">
+<div code-runner style="height: 428px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="支持 iconfont">支持 iconfont</h3>
   </div>
@@ -47,7 +47,7 @@ import Iconfont from '@/library/iconSelect/Iconfont.md'
   </div>
 </div>
 
-<div code-runner style="height: 428px">
+<div code-runner style="height: 428px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="自定义 Icons">自定义 Icons</h3>
   </div>
