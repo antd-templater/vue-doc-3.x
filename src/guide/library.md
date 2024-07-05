@@ -6,15 +6,15 @@ aside: false
 
 <br/>
 
-**`v3.x 版本` => 适配支持 Ant Design Vue 3.x**  
-**`v4.x 版本` => 适配支持 Ant Design Vue 4.x**
+**`v4.x 版本` => 适配支持 Ant Design Vue 4.x**  
+**`v3.x 版本` => 适配支持 Ant Design Vue 3.x**
 
 ## 如何安装?
 
 :::details => 适配支持 Ant Design Vue 4.x {open}
 
 ```bash
-pnpm add @antd-templater/library-3.x@^4.3.10
+pnpm add @antd-templater/library-3.x@^4.3.15
 
 ```
 

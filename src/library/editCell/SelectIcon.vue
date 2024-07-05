@@ -43,7 +43,7 @@ const cellStyle = {
   inputWrapper: {
     display: 'inline-block',
     paddingRight: '30px',
-    width: '240px',
+    minWidth: '240px',
   },
   textWrapper: {
     display: 'inline-block',

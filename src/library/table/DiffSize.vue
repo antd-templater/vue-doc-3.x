@@ -17,7 +17,6 @@
       v-model:paginate="paginate"
       :loadData="loadData"
       :immediate="true"
-      class="vp-raw"
       :size="size"
     />
   </div>

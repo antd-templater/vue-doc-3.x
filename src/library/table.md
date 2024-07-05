@@ -353,13 +353,39 @@ import FixedPageTable from '@/library/table/FixedPageTable.md'
 
 ### Expose
 
-| 属性名/方法名 | 说明描述                                          | 类型                                                                             |
-| :------------ | :------------------------------------------------ | :------------------------------------------------------------------------------- |
-| **reload**    | 表格重新加载当前数据                              | (delay?: Promise\<void> \| boolean \| number, force?: boolean) => Promise\<void> |
-| **refresh**   | 表格刷新加载第一页数据                            | (delay?: Promise\<void> \| boolean \| number, force?: boolean) => Promise\<void> |
-| **select**    | 表格手动选择指定选项 (Checkbox / Radio)           | (keys: STableKey[]) => void                                                      |
-| **expand**    | 表格手动展开某些行 (仅对有展开内容或树形数据有效) | (keys: STableKey[]) => void                                                      |
-| **update**    | 手动更新并重新渲染表格                            | (clean?: boolean) => void                                                        |
+| 属性/方法名 | 说明描述                                          | 类型                                                                             |
+| :---------- | :------------------------------------------------ | :------------------------------------------------------------------------------- |
+| **reload**  | 表格重新加载当前数据                              | (delay?: Promise\<void> \| boolean \| number, force?: boolean) => Promise\<void> |
+| **refresh** | 表格刷新加载第一页数据                            | (delay?: Promise\<void> \| boolean \| number, force?: boolean) => Promise\<void> |
+| **select**  | 表格手动选择指定选项 (Checkbox / Radio)           | (keys: STableKey[]) => void                                                      |
+| **expand**  | 表格手动展开某些行 (仅对有展开内容或树形数据有效) | (keys: STableKey[]) => void                                                      |
+| **update**  | 手动更新并重新渲染表格                            | (clean?: boolean) => void                                                        |
+
+### Definer
+
+| 定义                                   | 说明                                                                 |
+| :------------------------------------- | :------------------------------------------------------------------- |
+| **tableSorterDefiner**                 | 定义 **Props.defaultColumnSorters** 时的 TypeScript 提示和校验       |
+| **tableScrollDefiner**                 | 定义 **Props.scroll** 时的 TypeScript 提示和校验                     |
+| **tableStickyDefiner**                 | 定义 **Props.sticky** 时的 TypeScript 提示和校验                     |
+| **tableSourcesDefiner**                | 定义 **Props.sources** 时的 TypeScript 提示和校验                    |
+| **tableSummarysDefiner**               | 定义 **Props.summarys** 时的 TypeScript 提示和校验                   |
+| **tableColumnsDefiner**                | 定义 **Props.columns** 时的 TypeScript 提示和校验                    |
+| **tablePaginateDefiner**               | 定义 **Props.paginate** 时的 TypeScript 提示和校验                   |
+| **tableLoadDataDefiner**               | 定义 **Props.loadData** 时的 TypeScript 提示和校验                   |
+| **tableResponserDefiner**              | 定义 **Props.loadData** 数据源的预处理，详见 [Responser](#responser) |
+| **tableCustomHeaderRowAttrsDefiner**   | 定义 **Props.customHeaderRowAttrs** 时的 TypeScript 提示和校         |
+| **tableCustomBodyerRowAttrsDefiner**   | 定义 **Props.customBodyerRowAttrs** 时的 TypeScript 提示和校         |
+| **tableCustomFooterRowAttrsDefiner**   | 定义 **Props.customFooterRowAttrs** 时的 TypeScript 提示和校         |
+| **tableCustomBodyerRowStatesDefiner**  | 定义 **Props.customBodyerRowStates** 时的 TypeScript 提示和校        |
+| **tableCustomHeaderCellRenderDefiner** | 定义 **Props.customHeaderCellRender** 时的 TypeScript 提示和校       |
+| **tableCustomBodyerCellRenderDefiner** | 定义 **Props.customBodyerCellRender** 时的 TypeScript 提示和校验     |
+| **tableCustomFooterCellRenderDefiner** | 定义 **Props.customFooterCellRender** 时的 TypeScript 提示和校验     |
+| **tableEmitSorterDefiner**             | 定义 **Emits.sorter** 时的 TypeScript 提示和校验                     |
+| **tableEmitSelectDefiner**             | 定义 **Emits.select** 时的 TypeScript 提示和校验                     |
+| **tableEmitExpandDefiner**             | 定义 **Emits.expand** 时的 TypeScript 提示和校验                     |
+| **tableEmitPageChangeDefiner**         | 定义 **Emits.pageChange** 时的 TypeScript 提示和校验                 |
+| **tableEmitPageSizeChangeDefiner**     | 定义 **Emits.pageSizeChange** 时的 TypeScript 提示和校验             |
 
 ### Responser
 

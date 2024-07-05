@@ -1,7 +1,7 @@
 <template>
   <div
     ref="$codeRunner"
-    class="code-runner"
+    class="vp-raw code-runner"
   >
     <div class="runner-title">
       <div class="text">
@@ -16,7 +16,9 @@
     </div>
 
     <div class="runner-viewer">
-      <slot name="viewer" />
+      <AConfigProvider :locale="zhCN">
+        <slot name="viewer" />
+      </AConfigProvider>
     </div>
 
     <div class="runner-control">
@@ -68,6 +70,29 @@
 </template>
 
 <script setup lang="ts">
+import zhCN from 'ant-design-vue/es/locale/zh_CN'
+import 'dayjs/locale/zh-cn'
+
+import dayjs from 'dayjs'
+import isToday from 'dayjs/plugin/isToday'
+import isTomorrow from 'dayjs/plugin/isTomorrow'
+import isYesterday from 'dayjs/plugin/isYesterday'
+import objectSupport from 'dayjs/plugin/objectSupport'
+import advancedFormat from 'dayjs/plugin/advancedFormat'
+import customParseFormat from 'dayjs/plugin/customParseFormat'
+import quarterOfYear from 'dayjs/plugin/quarterOfYear'
+import weekOfYear from 'dayjs/plugin/weekOfYear'
+
+dayjs.locale('zh-cn')
+dayjs.extend(isToday)
+dayjs.extend(isTomorrow)
+dayjs.extend(isYesterday)
+dayjs.extend(objectSupport)
+dayjs.extend(advancedFormat)
+dayjs.extend(customParseFormat)
+dayjs.extend(quarterOfYear)
+dayjs.extend(weekOfYear)
+
 defineOptions({ name: 'CodeRunner' })
 
 const trigger = (type: string) => {
@@ -182,21 +207,6 @@ const $codeRunner = ref<HTMLElement | null>(null)
       left: 22px;
       top: 0;
     }
-
-    :deep {
-      table,
-      table th,
-      table td {
-        border: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      ul li + li {
-        padding: 0;
-        margin: 0;
-      }
-    }
   }
 
   & > .runner-control {
@@ -254,6 +264,22 @@ const $codeRunner = ref<HTMLElement | null>(null)
         background-color: #fdfdfd;
         overflow: hidden;
       }
+    }
+  }
+
+  :deep {
+    table,
+    table th,
+    table td {
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul,
+    li {
+      padding: 0;
+      margin: 0;
     }
   }
 }

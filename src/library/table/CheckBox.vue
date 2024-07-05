@@ -45,7 +45,6 @@
       :selectedRowMode="selectedRowMode"
       :loadData="loadData"
       :immediate="true"
-      class="vp-raw"
       rowKey="id"
     />
   </div>

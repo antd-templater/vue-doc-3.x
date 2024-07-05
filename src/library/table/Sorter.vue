@@ -19,7 +19,6 @@
       :columnSorterMultiple="columnSorterMultiple"
       :loadData="loadData"
       :immediate="true"
-      class="vp-raw"
     />
   </div>
 </template>
