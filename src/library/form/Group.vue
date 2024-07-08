@@ -241,20 +241,13 @@ const groups = formGroupsDefiner([
     },
   },
   {
-    type: 'ARate',
-    slot: '',
-    field: 'rate',
-    label: '评分',
-    props: {
-      allowHalf: true,
-      count: 4,
-    },
-  },
-  {
     type: 'ASlider',
     slot: '',
     field: 'slider',
     label: '滑条',
+    grid: {
+      md: 10, // 覆盖 AGroup grid (md:6)
+    },
   },
   {
     type: 'ASwitch',
@@ -352,7 +345,6 @@ const model: Ref<any> = ref({
   quarterPicker: '2024-3',
   timePicker: '09:35',
   rangePicker: ['2024-05-15', '2024-09-25'],
-  rate: 1.5,
   slider: 35,
   switch: 'Y',
   checkbox: ['apple', 'pear'],
@@ -376,7 +368,7 @@ watchEffect(() => {
     }
   }
 
-  model.value.textarea = `{\n${prints.join('\n')}\n}`
+  model.value.textarea = `{\n${prints.join('\n')}\n}\n---------- model.value ----------`
 })
 </script>
 

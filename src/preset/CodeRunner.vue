@@ -1,7 +1,7 @@
 <template>
   <div
     ref="$codeRunner"
-    class="vp-raw code-runner"
+    class="code-runner"
   >
     <div class="runner-title">
       <div class="text">

@@ -50,7 +50,7 @@ import ComponentSlot from '@/library/form/ComponentSlot.md'
   </div>
 </div>
 
-<div code-runner style="height: 1343px; overflow: hidden;">
+<div code-runner style="height: 1315px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="表单分组">表单分组</h3>
   </div>
@@ -179,84 +179,26 @@ import ComponentSlot from '@/library/form/ComponentSlot.md'
 
 ### Validator
 
-目前只预设了 密码 和 数字 校验规则，当然你也可以修改或完善校验规则
+目前只预设了 密码(password) 和 数字(number) 校验规则。 当然你也可以自定义校验规则 => [详情](/redirect?${domain}.com//antd-templater/library-3.x/blob/main/src/core/S-Form/form.helper.ts)
 
 ::: code-group
 
-```typescript [已预设 - 密码]
-formValidator.password = (rule) => {
-  const message = rule.message;
-  const pattern = rule.pattern;
-  const validator = rule.validator;
-
-  if (helper.isString(validator)) {
-    if (!helper.isRegExp(pattern)) {
-      Object.assign(rule, { pattern: /.{6,}/iu });
-    }
-
-    rule.validator = (rule, value) => {
-      if (!value && value !== 0 && rule.required !== true) {
-        return Promise.resolve();
-      }
-
-      if (!value && value !== 0 && rule.required === true) {
-        return Promise.reject(new Error(message || "密码为必填项"));
-      }
-
-      if (!rule.pattern?.test(value)) {
-        return Promise.reject(new Error(validator || message || "密码过短"));
-      }
-
-      return Promise.resolve();
-    };
-
-    Object.assign(rule, { message: undefined });
-  }
-
-  return rule;
-};
-```
-
-```typescript [已预设 - 数字]
-formValidator.number = (rule) => {
-  const message = rule.message;
-  const pattern = rule.pattern;
-  const validator = rule.validator;
-
-  if (helper.isString(validator)) {
-    if (!helper.isRegExp(pattern)) {
-      Object.assign(rule, { pattern: /^[+-]?\d+\.?\d*$/i });
-    }
-
-    rule.validator = (rule, value) => {
-      if (!value && value !== 0 && rule.required !== true) {
-        return Promise.resolve();
-      }
-
-      if (!value && value !== 0 && rule.required === true) {
-        return Promise.reject(new Error(message || "该项为必填项"));
-      }
-
-      if (!rule.pattern?.test(value)) {
-        return Promise.reject(new Error(validator || message || "格式有误"));
-      }
-
-      return Promise.resolve();
-    };
-
-    Object.assign(rule, { message: undefined });
-  }
-
-  return rule;
-};
-```
-
-```typescript [范例使用 - 密码]
+```typescript [范例 - 校验密码]
 const rules = formRulesDefiner({
   password: formValidator.password({
     message: "请输入用户密码",
     validator: "用户密码过短",
     pattern: /.{8,}/,
+    required: true,
+  }),
+});
+```
+
+```typescript [范例 - 校验数字]
+const rules = formRulesDefiner({
+  number: formValidator.number({
+    message: "请输入数字",
+    validator: "请输入正确的数字",
     required: true,
   }),
 });

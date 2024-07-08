@@ -62,15 +62,6 @@ const groups = formGroupsDefiner([
     },
   },
   {
-    type: 'ARate',
-    slot: '',
-    field: 'bRate',
-    label: '评分',
-    props: {
-      allowHalf: true,
-    },
-  },
-  {
     type: 'ASlider',
     slot: '',
     field: 'bSlider',
@@ -103,7 +94,6 @@ const model: Ref<any> = ref({
   bInput: '这是一个输入框',
   bSelect: 'jack',
   bDatePicker: '2024-6-8 8:30',
-  bRate: 3.5,
   bSlider: 35,
   bSwitch: 'Y',
 })

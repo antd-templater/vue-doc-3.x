@@ -50,7 +50,7 @@ onMounted(() => {
   .redirect-route-card {
     width: 88%;
     height: 180px;
-    max-width: 640px;
+    max-width: 750px;
     padding: 30px;
     margin: auto;
     border-radius: 3px;
@@ -75,16 +75,16 @@ onMounted(() => {
 
     .card-content {
       width: 100%;
-      height: 54px;
-      padding: 0 5px;
+      min-height: 54px;
+      padding: 15px 5px;
       color: #707277;
       font-size: 16px;
-      line-height: 54px;
+      line-height: 1.5;
       font-weight: normal;
       border-bottom: 1px solid #e5e6eb;
+      word-break: break-all;
+      white-space: normal;
       overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellips;
     }
   }
 }
