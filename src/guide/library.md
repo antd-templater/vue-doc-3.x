@@ -14,7 +14,8 @@ aside: false
 :::details => 适配支持 Ant Design Vue 4.x {open}
 
 ```bash
-pnpm add @antd-templater/library-3.x@^4.3.15
+pnpm add @antd-templater/library-3.x@^4.3.16
+pnpm add @antd-templater/eslint-config@^1.0.6
 
 ```
 
@@ -39,7 +40,7 @@ pnpm add @antd-templater/library-3.x@^3.0.2
 | SEllipsis   | 文字省略提示 | 基于 ATooltip 的封装，支持实时计算内容是否超出父元素边界，是否需要文字省略和 Tooltip 提示            | [详情 ↗](/library/ellipsis)    |
 | STable      | 表格组件     | 不是 ATable 的封装，支持 列拉伸/拖拽/属性配置，单元格合并/卡槽定义，Checkbox/Radio、内置分页等功能   | [详情 ↗](/library/table)       |
 | SForm       | 表单组件     | 支持 Groups 配置渲染表单内容，也支持卡槽自定义组件。(Group: ARate、ARadio、AInput、ASwitch ...)      | [详情 ↗](/library/form)        |
-| STree       | 树形组件     | 基于 ATree 的封装，支持 link 模式 (子节点有一个被选中，该父节点在数据层也是选中的)，同时也扩展了 Api | [详情 ↗](/library/tree)        |
+| STree       | 树形组件     | 借助 ATree 的 checkStrictly="true" 特性，重新实现了 `勾选/选中/展开/异步加载` 等逻辑，并扩展了其 API | [详情 ↗](/library/tree)        |
 
 ## 如何使用?
 

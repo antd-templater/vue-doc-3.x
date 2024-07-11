@@ -26,6 +26,7 @@ import Base from '@/library/table/Base.md'
 import Merge from '@/library/table/Merge.md'
 import Footer from '@/library/table/Footer.md'
 import Sorter from '@/library/table/Sorter.md'
+import Events from '@/library/table/Events.md'
 import Striped from '@/library/table/Striped.md'
 import Sources from '@/library/table/Sources.md'
 import CheckBox from '@/library/table/CheckBox.md'
@@ -52,7 +53,7 @@ import FixedPageTable from '@/library/table/FixedPageTable.md'
   </div>
 </div>
 
-<div code-runner style="height: 653px; overflow: hidden;">
+<div code-runner style="height: 627px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="带斑马纹表格">带斑马纹表格</h3>
   </div>
@@ -70,6 +71,15 @@ import FixedPageTable from '@/library/table/FixedPageTable.md'
   </div>
 </div>
 
+<div code-runner style="height: 627px; overflow: hidden;">
+  <div code-runner-title>
+    <h3 id="表格事件自定义">表格事件自定义</h3>
+  </div>
+  <div style="padding: 1px;">
+    <Events/>
+  </div>
+</div>
+
 <div code-runner style="height: 599px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="表格卡槽自定义">表格卡槽自定义</h3>
@@ -79,7 +89,7 @@ import FixedPageTable from '@/library/table/FixedPageTable.md'
   </div>
 </div>
 
-<div code-runner style="height: 654px; overflow: hidden;">
+<div code-runner style="height: 628px; overflow: hidden;">
   <div code-runner-title>
     <h3 id="远程加载数据">远程加载数据</h3>
   </div>

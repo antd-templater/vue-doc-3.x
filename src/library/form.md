@@ -159,14 +159,14 @@ import ComponentSlot from '@/library/form/ComponentSlot.md'
 
 ### Expose
 
-| 属性/方法名        | 说明描述                                                                     | 类型                                                                |
-| :----------------- | :--------------------------------------------------------------------------- | :------------------------------------------------------------------ |
-| **resetFields**    | 对整个表单进行重置，将所有字段值重置为初始值并移除校验结果                   | (name?: NamePath) => any                                            |
-| **clearValidate**  | 移除表单项的校验结果。传入待移除的表单项的 name 属性或者 name 组成的数组     | (name?: NamePath) => any                                            |
-| **getFieldsValue** | 获取表单数据，不建议使用。更推荐 **v-model:model**，直接获取 **model.value** | (nameList?: InternalNamePath[] \| true) => any                      |
-| **scrollToField**  | 滚动到对应字段位置                                                           | (name: NamePath, options?: any) => any                              |
-| **validateFields** | 触发表单验证                                                                 | (nameList?: NamePath[] \| string, options?: ValidateOptions) => any |
-| **validate**       | 触发表单验证                                                                 | (nameList?: NamePath[] \| string, options?: ValidateOptions) => any |
+| 属性/方法名        | 说明描述                                                                    | 类型                                                                |
+| :----------------- | :-------------------------------------------------------------------------- | :------------------------------------------------------------------ |
+| **resetFields**    | 对整个表单进行重置，将所有字段值重置为初始值并移除校验结果                  | (name?: NamePath) => any                                            |
+| **clearValidate**  | 移除表单项的校验结果。传入待移除的表单项的 name 属性或者 name 组成的数组    | (name?: NamePath) => any                                            |
+| **getFieldsValue** | 获取表单数据，不建议使用。更推荐 **v-model**，直接通过 **model.value** 获取 | (nameList?: InternalNamePath[] \| true) => any                      |
+| **scrollToField**  | 滚动到对应字段位置                                                          | (name: NamePath, options?: any) => any                              |
+| **validateFields** | 触发表单验证                                                                | (nameList?: NamePath[] \| string, options?: ValidateOptions) => any |
+| **validate**       | 触发表单验证                                                                | (nameList?: NamePath[] \| string, options?: ValidateOptions) => any |
 
 ### Definer
 
