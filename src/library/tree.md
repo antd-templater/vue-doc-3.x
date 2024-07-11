@@ -132,54 +132,54 @@ import CheckedLevel from '@/library/tree/CheckedLevel.md'
 
 #### STree Props
 
-| 参数                             | 说明                                                                       | 类型                 |    默认值     |
-| :------------------------------- | :------------------------------------------------------------------------- | :------------------- | :-----------: |
-| **class**                        | 定义 **STree** 组件 class 类                                               | any                  |       -       |
-| **style**                        | 定义 **STree** 组件 样式                                                   | any                  |       -       |
-| **height**                       | 源自 **ATree** 组件 `props.height`                                         | number               |       -       |
-| **bgColor**                      | 定义 **STree** 组件 背景色                                                 | string               | 'transparent' |
-| **treeData (v-model)**           | **STree** 数据源                                                           | STreeSourceNode[]    |      []       |
-| **loadData**                     | 异步加载远程节点                                                           | STreeLoadData        |       -       |
-| **dropHandler**                  | 拖拽结束时的拦截器，仅在 `draggable="true"` 时启用                         | STreeDropHandler     |       -       |
-| **checkedKeys (v-model)**        | 节点已勾选的选项                                                           | string[] \| number[] |      []       |
-| **selectedKeys (v-model)**       | 节点已选中的选项                                                           | string[] \| number[] |      []       |
-| **expandedKeys (v-model)**       | 已展开的节点选项                                                           | string[] \| number[] |      []       |
-| **selectedMode**                 | 节点勾选时的模式，[选项 link 模式](#选项link模式)                          | 'link' \| 'default'  |   'default'   |
-| **checkedMode**                  | 节点选中时的模式，[选项 link 模式](#选项link模式)                          | 'link' \| 'default'  |   'default'   |
-| **filterField (v-model)**        | 搜索模式，支持 **key** / **title** 两种模式, 使用 **title** 时支持模糊匹配 | 'key' \| 'title'     |    'title'    |
-| **filterValue (v-model)**        | 搜索值                                                                     | string               |       -       |
-| **fieldNames**                   | 替换 `title`, `key`, `children` 字段, [详情](#stree-fieldnames)            | object               |       -       |
-| **allowCheckedLevel**            | 指定 tree 节点 selectable 层级                                             | number               |       1       |
-| **allowSelectedLevel**           | 指定 tree 节点 checkable 层级                                              | number               |       1       |
-| **forceCleanWhenNotInTreeNodes** | 是否清理不在当前 treeData 中的 `checkedKeys/selectedKeys`                  | boolean              |     false     |
-| **forceCleanWhenRemoveTreeNode** | 是否清理从当前 treeData 中移除的那些 `checkedKeys/selectedKeys`            | boolean              |     true      |
-| **forceApplyDisableCheckbox**    | 当某父节点禁用可选项时 (disableCheckbox), 是否强制其子节点也禁用可选项     | boolean              |     false     |
-| **forceApplyDisabled**           | 当某父节点禁用选项时 (disabled), 是否强制其子节点也禁用选项                | boolean              |     false     |
-| **alwaysShowTitleButton**        | tree 节点定义的 `titleButton` 是否一直显示，而不是只有鼠标 hover 才显示    | boolean              |     false     |
-| **allowSelectToCheck**           | 当选中某 tree 节点选择时，是否当 **切换该节点勾选项** 进行处理             | boolean              |     false     |
-| **allowAutoCollapsed**           | 当折叠某节点时，是否同时折叠该节点名下的父节点                             | boolean              |     true      |
-| **allowAutoExpanded**            | 当展开某节点时，如果该节点名下仅有一个节点，且为父节点时，是否展开该父节点 | boolean              |     true      |
-| **allowAutoExpandLoad**          | 当尝试展开某节点名下父节点，发现该父节点需要异步加载节点时，是否继续展开   | boolean              |     fasle     |
-| **allowMultiExpanded**           | 是否允许多个展开项存在。当设置为 **false** 时，即出现了手风琴效果          | boolean              |     true      |
-| **defaultExpandAll**             | 初次渲染 tree 节点时，是否展开当前所有父节点                               | boolean              |     false     |
-| **allowUnExpanded**              | 是否允许折叠所有 tree 节点                                                 | boolean              |     false     |
-| **allowUnSelected**              | 是否允许 tree 节点全部未 selected                                          | boolean              |     false     |
-| **allowUnChecked**               | 是否允许 tree 节点全部未 checked                                           | boolean              |     true      |
-| **iconfontUrl**                  | 配置 tree 图标 iconfontUrl                                                 | string               |       -       |
-| **iconPrefix**                   | 配置 tree 图标 iconPrefix                                                  | string               |       -       |
-| **iconStyle**                    | 配置 tree 图标 style 样式                                                  | object               |       -       |
-| **iconClass**                    | 配置 tree 图标 class 类                                                    | object               |       -       |
-| **selectable**                   | tree 节点是否可选中                                                        | boolean              |     true      |
-| **checkable**                    | 设置独立节点是否展示 Checkbox                                              | boolean              |     false     |
-| **blockNode**                    | 是否 tree 节点占据一行                                                     | boolean              |     false     |
-| **draggable**                    | 设置节点可拖拽                                                             | boolean              |     false     |
-| **disabled**                     | 是否禁用                                                                   | boolean              |     false     |
-| **showIcon**                     | 是否展示图标                                                               | boolean              |     false     |
-| **showLine**                     | 是否展示连接线                                                             | boolean              |     false     |
-| **loading**                      | 是否 loading                                                               | boolean              |     false     |
-| **virtual**                      | 设置 false 时关闭虚拟滚动                                                  | boolean              |     true      |
-| **tooltip**                      | 是否启用 SEllipsis, 当 tree 节点标题内容过长，自动省略和提示               | boolean              |     true      |
-| **sticky**                       | 是否对 tree 根节点 进行置顶吸附                                            | boolean              |     false     |
+| 参数                              | 说明                                                                                                   | 类型                 |    默认值     |
+| :-------------------------------- | :----------------------------------------------------------------------------------------------------- | :------------------- | :-----------: |
+| **class**                         | 定义 **STree** 组件 class 类                                                                           | any                  |       -       |
+| **style**                         | 定义 **STree** 组件 样式                                                                               | any                  |       -       |
+| **height**                        | 源自 **ATree** 组件 `props.height`                                                                     | number               |       -       |
+| **bgColor**                       | 定义 **STree** 组件 背景色                                                                             | string               | 'transparent' |
+| **treeData (v-model)**            | **STree** 数据源                                                                                       | STreeSourceNode[]    |      []       |
+| **loadData**                      | 异步加载远程节点                                                                                       | STreeLoadData        |       -       |
+| **dropHandler**                   | 拖拽结束时的拦截器，仅在 `draggable="true"` 时启用                                                     | STreeDropHandler     |       -       |
+| **checkedKeys (v-model)**         | 节点已勾选的选项                                                                                       | string[] \| number[] |      []       |
+| **selectedKeys (v-model)**        | 节点已选中的选项                                                                                       | string[] \| number[] |      []       |
+| **expandedKeys (v-model)**        | 已展开的节点选项                                                                                       | string[] \| number[] |      []       |
+| **selectedMode**                  | 节点勾选时的模式，[选项 link 模式](#选项link模式)                                                      | 'link' \| 'default'  |   'default'   |
+| **checkedMode**                   | 节点选中时的模式，[选项 link 模式](#选项link模式)                                                      | 'link' \| 'default'  |   'default'   |
+| **filterField (v-model)**         | 搜索模式，支持 **key** / **title** 两种模式, 使用 **title** 时支持模糊匹配                             | 'key' \| 'title'     |    'title'    |
+| **filterValue (v-model)**         | 搜索值                                                                                                 | string               |       -       |
+| **fieldNames (原 replaceFields)** | 替换 `title`, `key`, `children` 字段, 若还使用 **replaceFields**，请及时修改 [详情](#stree-fieldnames) | object               |       -       |
+| **allowCheckedLevel**             | 指定 tree 节点 selectable 层级                                                                         | number               |       1       |
+| **allowSelectedLevel**            | 指定 tree 节点 checkable 层级                                                                          | number               |       1       |
+| **forceCleanWhenNotInTreeNodes**  | 是否清理不在当前 treeData 中的 `checkedKeys/selectedKeys`                                              | boolean              |     false     |
+| **forceCleanWhenRemoveTreeNode**  | 是否清理从当前 treeData 中移除的那些 `checkedKeys/selectedKeys`                                        | boolean              |     true      |
+| **forceApplyDisableCheckbox**     | 当某父节点禁用可选项时 (disableCheckbox), 是否强制其子节点也禁用可选项                                 | boolean              |     false     |
+| **forceApplyDisabled**            | 当某父节点禁用选项时 (disabled), 是否强制其子节点也禁用选项                                            | boolean              |     false     |
+| **alwaysShowTitleButton**         | tree 节点定义的 `titleButton` 是否一直显示，而不是只有鼠标 hover 才显示                                | boolean              |     false     |
+| **allowSelectToCheck**            | 当选中某 tree 节点选择时，是否当 **切换该节点勾选项** 进行处理                                         | boolean              |     false     |
+| **allowAutoCollapsed**            | 当折叠某节点时，是否同时折叠该节点名下的父节点                                                         | boolean              |     true      |
+| **allowAutoExpanded**             | 当展开某节点时，如果该节点名下仅有一个节点，且为父节点时，是否展开该父节点                             | boolean              |     true      |
+| **allowAutoExpandLoad**           | 当尝试展开某节点名下父节点，发现该父节点需要异步加载节点时，是否继续展开                               | boolean              |     fasle     |
+| **allowMultiExpanded**            | 是否允许多个展开项存在。当设置为 **false** 时，即出现了手风琴效果                                      | boolean              |     true      |
+| **defaultExpandAll**              | 初次渲染 tree 节点时，是否展开当前所有父节点                                                           | boolean              |     false     |
+| **allowUnExpanded**               | 是否允许折叠所有 tree 节点                                                                             | boolean              |     false     |
+| **allowUnSelected**               | 是否允许 tree 节点全部未 selected                                                                      | boolean              |     false     |
+| **allowUnChecked**                | 是否允许 tree 节点全部未 checked                                                                       | boolean              |     true      |
+| **iconfontUrl**                   | 配置 tree 图标 iconfontUrl                                                                             | string               |       -       |
+| **iconPrefix**                    | 配置 tree 图标 iconPrefix                                                                              | string               |       -       |
+| **iconStyle**                     | 配置 tree 图标 style 样式                                                                              | object               |       -       |
+| **iconClass**                     | 配置 tree 图标 class 类                                                                                | object               |       -       |
+| **selectable**                    | tree 节点是否可选中                                                                                    | boolean              |     true      |
+| **checkable**                     | 设置独立节点是否展示 Checkbox                                                                          | boolean              |     false     |
+| **blockNode**                     | 是否 tree 节点占据一行                                                                                 | boolean              |     false     |
+| **draggable**                     | 设置节点可拖拽                                                                                         | boolean              |     false     |
+| **disabled**                      | 是否禁用                                                                                               | boolean              |     false     |
+| **showIcon**                      | 是否展示图标                                                                                           | boolean              |     false     |
+| **showLine**                      | 是否展示连接线                                                                                         | boolean              |     false     |
+| **loading**                       | 是否 loading                                                                                           | boolean              |     false     |
+| **virtual**                       | 设置 false 时关闭虚拟滚动                                                                              | boolean              |     true      |
+| **tooltip**                       | 是否启用 SEllipsis, 当 tree 节点标题内容过长，自动省略和提示                                           | boolean              |     true      |
+| **sticky**                        | 是否对 tree 根节点 进行置顶吸附                                                                        | boolean              |     false     |
 
 #### STree FieldNames
 
