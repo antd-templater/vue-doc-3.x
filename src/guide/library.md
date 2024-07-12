@@ -6,8 +6,10 @@ aside: false
 
 <br/>
 
-**`v4.x 版本` => 适配支持 Ant Design Vue 4.x**  
-**`v3.x 版本` => 适配支持 Ant Design Vue 3.x**
+基于 `Ant Design Vue` 部分组件的封装和扩展，提供更适配桌面端的高阶组件
+
+- `v4.x 版本` => 适配支持 Ant Design Vue 4.x
+- `v3.x 版本` => 适配支持 Ant Design Vue 3.x
 
 ## 如何安装?
 

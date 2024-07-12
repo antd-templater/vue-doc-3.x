@@ -313,6 +313,13 @@ function createGuide() {
         },
       ],
     },
+
+    {
+      text: 'Bug 问题反馈',
+      link: 'https://github.com/antd-templater/template-3.x/issues',
+      collapsed: true,
+      items: [],
+    },
   ]
 }
 
@@ -362,6 +369,16 @@ function createLibrary() {
         {
           text: '<span style="display: inline-block; width: 120px;">树形组件 ------=></span>STree',
           link: '/library/tree',
+        },
+      ],
+    },
+
+    {
+      text: 'Github',
+      items: [
+        {
+          text: 'Bug 反馈',
+          link: 'https://github.com/antd-templater/library-3.x/issues',
         },
       ],
     },

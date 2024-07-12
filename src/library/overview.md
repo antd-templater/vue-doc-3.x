@@ -6,8 +6,8 @@ aside: false
 
 <br/>
 
-**`v3.x 版本` => 适配支持 Ant Design Vue 3.x**  
-**`v4.x 版本` => 适配支持 Ant Design Vue 4.x**
+**`v4.x 版本` => 适配支持 Ant Design Vue 4.x**  
+**`v3.x 版本` => 适配支持 Ant Design Vue 3.x**
 
 <div style="width: 100%; height: 1px;" />
 
