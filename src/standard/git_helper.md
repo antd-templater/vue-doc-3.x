@@ -21,7 +21,7 @@ aside: false
 
 ```json
 {
-  "name": "@antd-templater/template-3.x",
+  "name": "@antd-templater/vue-template-3.x",
   "description": "后台管理系统模版 - 基于 Vue3.x Ant Design Vue 组件库",
 
   "config": {

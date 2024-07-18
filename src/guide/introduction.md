@@ -6,7 +6,7 @@ aside: false
 
 ## 简介
 
-**Antd-Templater** 是一个基于 TypeScript + Vue3.x + Pinia + Ant-Design-Vue4.x + Vite 等技术栈，为开发中大型后台管理系统而提供开箱即用的解决方案，支持动态主题(Design Token)、动态菜单配置、路由权限校验、数据持久化储存，同时也提供完备的 TypeScript + ESLint + Volar 格式化和规范。
+**Antd-Template-Vue** 是一个基于 TypeScript + Vue3.x + Pinia + Ant-Design-Vue4.x + Vite 等技术栈，为开发中大型后台管理系统而提供开箱即用的解决方案，支持动态主题(Design Token)、动态菜单配置、路由权限校验、数据持久化储存，同时也提供完备的 TypeScript + ESLint + Volar 格式化和规范。
 
 - 轻量化: 仅预设基础访问页, 没有冗余 Demo 页 [<span style="font-size: 15px">(详情)</span>](../standard/develop_guide.html#目录结构)
 - 多主题: 支持亮色风格、暗色风格、暗黑风格等
@@ -42,7 +42,7 @@ aside: false
 
 ```bash [安装依赖]
   # Enter project
-  cd Antd-Templater
+  cd Antd-Template-Vue
 
   # Install denpendencies
   pnpm install
@@ -70,8 +70,8 @@ aside: false
 
 :::details 建议使用 VSCode 编辑器 {open}
 
-1. Antd-Templater 预设了项目级 VSCode 配置，提供并支持统一的代码风格和格式化。
-2. Antd-Templater 使用了 ESLint9.x 版本，似乎在 WebStorm 编辑器中不能很好的工作。
+1. Antd-Template-Vue 预设了项目级 VSCode 配置，提供并支持统一的代码风格和格式化。
+2. Antd-Template-Vue 使用了 ESLint9.x 版本，似乎在 WebStorm 编辑器中不能很好的工作。
 
 :::
 

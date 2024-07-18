@@ -24,18 +24,18 @@ aside: false
 import { ref } from 'vue'
 import { onMounted } from 'vue'
 
-const prettierrc = ref('https://github.com/antd-templater/antd-template-vue3.x/blob/main/.prettierrc')
-const prettierignore = ref('https://github.com/antd-templater/antd-template-vue3.x/blob/main/.prettierignore')
-const eslintconfigmjs = ref('https://github.com/antd-templater/antd-template-vue3.x/blob/main/eslint.config.mjs')
+const prettierrc = ref('https://github.com/antd-templater/vue-template-3.x/blob/main/.prettierrc')
+const prettierignore = ref('https://github.com/antd-templater/vue-template-3.x/blob/main/.prettierignore')
+const eslintconfigmjs = ref('https://github.com/antd-templater/vue-template-3.x/blob/main/eslint.config.mjs')
 
 onMounted(() => {
   const href = window.location.href
   const gitee = 'https://antd-templater.gitee.io/'
 
   if (href.startsWith(gitee)) {
-    prettierrc.value = 'https://gitee.com/antd-templater/antd-template-vue3.x/blob/main/.prettierrc'
-    prettierignore.value = 'https://gitee.com/antd-templater/antd-template-vue3.x/blob/main/.prettierignore'
-    eslintconfigmjs.value = 'https://gitee.com/antd-templater/antd-template-vue3.x/blob/main/eslint.config.mjs'
+    prettierrc.value = 'https://gitee.com/antd-templater/vue-template-3.x/blob/main/.prettierrc'
+    prettierignore.value = 'https://gitee.com/antd-templater/vue-template-3.x/blob/main/.prettierignore'
+    eslintconfigmjs.value = 'https://gitee.com/antd-templater/vue-template-3.x/blob/main/eslint.config.mjs'
   }
 })
 </script>

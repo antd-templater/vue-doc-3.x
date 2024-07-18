@@ -12,7 +12,7 @@ Vue 单文件组件一般有如下 3 种加载引用方式
 
 ## 按需加载组件
 
-在使用 Ant Design Vue 官方组件时，**按需加载** 是我们比较推荐的一种方式。而在 **Antd-Templater** 中，则主要借助如下 vite 插件来实现：
+在使用 Ant Design Vue 官方组件时，**按需加载** 是我们比较推荐的一种方式。而在 **Antd-Template-Vue** 中，则主要借助如下 vite 插件来实现：
 
 ::: details unplugin-vue-components => 自动按需引用 Ant Design Vue 组件 {open}
 
@@ -131,7 +131,7 @@ export default defineConfig(() => {
 
 ## 全局注册组件
 
-除了 Ant Deisgn Vue v4.x 官方组件，Antd-Templater 还提供了 **Library-3.x 组件库** (提供了 SForm、STable、STree 等高阶组件)。
+除了 Ant Deisgn Vue v4.x 官方组件，Antd-Template-Vue 还提供了 **Library-3.x 组件库** (提供了 SForm、STable、STree 等高阶组件)。
 
 ::: details 在使用 Library-3.x 组件时，我们采用全局注册方式来声明定义组件 {open}
 
@@ -257,7 +257,7 @@ export default tseslint.config(
 
 ## 局部注册组件
 
-Antd-Templater 在开发 **业务页面** 时，往往需要封装定义 **业务级组件**。而在使用这些组件时，我们通常会使用 import 导入，进行局部注册。
+Antd-Template-Vue 在开发 **业务页面** 时，往往需要封装定义 **业务级组件**。而在使用这些组件时，我们通常会使用 import 导入，进行局部注册。
 
 ::: details 组件局部注册 {open}
 

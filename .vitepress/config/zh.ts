@@ -35,8 +35,8 @@ function createNav() {
       text: 'Vue3.x',
       items: [
         {
-          text: 'Vue2.x (待定)',
-          link: `/redirect?antd-templater.\${domain}.io/docs/vue2.x`,
+          text: 'Nuxt3.x (计划)',
+          link: `/redirect?antd-templater.\${domain}.io/docs/nuxt3.x`,
           target: '_blank',
         },
       ],
@@ -316,7 +316,7 @@ function createGuide() {
 
     {
       text: 'Bug 问题反馈',
-      link: 'https://github.com/antd-templater/template-3.x/issues',
+      link: 'https://github.com/antd-templater/vue-template-3.x/issues',
       collapsed: true,
       items: [],
     },

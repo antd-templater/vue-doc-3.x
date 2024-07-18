@@ -4,7 +4,7 @@ aside: false
 
 # 定制主题
 
-**Antd-Templater** 使用了 4.x 版本的 Ant Design Vue 组件库，不同于 3.x 版本的 less 和 CSS 变量，它提供了全新的定制主题方案 **(CSS-in-JS)**。相比之下，动态主题的能力也有了极大提升，包括但不限于：
+**Antd-Template-Vue** 使用了 4.x 版本的 Ant Design Vue 组件库，不同于 3.x 版本的 less 和 CSS 变量，它提供了全新的定制主题方案 **(CSS-in-JS)**。相比之下，动态主题的能力也有了极大提升，包括但不限于：
 
 1. 支持动态切换主题
 2. 支持同时存在多个主题
@@ -13,7 +13,7 @@ aside: false
 
 ## 主题配置
 
-在 4.x 版本的 Ant Design Vue 组件库中，影响主题的最小元素称为 [Design Token](https://antdv.com/docs/vue/customize-theme-cn#演变过程)，通过修改 Design Token 来呈现出各种各样的主题或者组件。在 **Antd-Templater** 中，我们通过定义 `<App/>` [ConfigProvider](https://antdv.com/components/config-provider-cn) 的 **主题风格**、**组件尺寸**、**国际化** 等全局配置来实现动态切换主题能力。
+在 4.x 版本的 Ant Design Vue 组件库中，影响主题的最小元素称为 [Design Token](https://antdv.com/docs/vue/customize-theme-cn#演变过程)，通过修改 Design Token 来呈现出各种各样的主题或者组件。在 **Antd-Template-Vue** 中，我们通过定义 `<App/>` [ConfigProvider](https://antdv.com/components/config-provider-cn) 的 **主题风格**、**组件尺寸**、**国际化** 等全局配置来实现动态切换主题能力。
 
 ::: code-group
 
@@ -65,7 +65,7 @@ watchEffect(() => {
 
 ## 预设主题
 
-我们在 **Antd-Templater** 中预设了 `默认主题` 和 `主题色库`，以便在 `<App/>` 中完成主题定制和组件全局配置。
+我们在 **Antd-Template-Vue** 中预设了 `默认主题` 和 `主题色库`，以便在 `<App/>` 中完成主题定制和组件全局配置。
 
 ::: code-group
 

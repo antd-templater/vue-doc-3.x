@@ -4,7 +4,7 @@ layout: home
 hero:
   name: "Antd Templater"
   text: "后台管理系统模版"
-  tagline: 基于 Vue3.x Ant Design Vue 组件库开发
+  tagline: 基于 Vue3 + Ant Design Vue 组件库开发
 
   actions:
     - theme: brand
@@ -18,7 +18,7 @@ hero:
 
     - theme: alt
       text: 源码仓库
-      link: /redirect?${domain}.com/antd-templater/template-3.x
+      link: /redirect?${domain}.com/antd-templater/vue-template-3.x
       target: _blank
 
   image:
@@ -51,7 +51,7 @@ features:
 
 ```bash [安装依赖]
   # Enter project
-  cd Antd-Templater
+  cd Antd-Template-Vue
 
   # Install denpendencies
   pnpm install

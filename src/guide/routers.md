@@ -4,7 +4,7 @@ aside: false
 
 # 路由配置
 
-**Antd-Templater** 使用 Vue-Router4.x 作为单页面应用(SPA) 的官方路由，其配置主要有两方面:
+**Antd-Template-Vue** 使用 Vue-Router4.x 作为单页面应用(SPA) 的官方路由，其配置主要有两方面:
 
 - 动态路由配置  
   -> 菜单路由

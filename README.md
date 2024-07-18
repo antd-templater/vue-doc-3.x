@@ -2,7 +2,7 @@
   <a href="https://antd-templater.github.io/docs/vue3.x/">
     <img 
       style="width: 100%; margin: 0 auto;" 
-      src="https://antd-templater.github.io/resource/Ant-Templater-Docs-3.x.png" 
+      src="https://antd-templater.github.io/resource/Ant-Template-Vue-Docs-3.x.png" 
       alt="Ant Templater3.x Docs"
     >
   </a>

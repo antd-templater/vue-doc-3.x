@@ -4,7 +4,7 @@ aside: false
 
 # Axios 定义使用
 
-在 Antd-Templater 开发中，我们选择 Axios 作为与后端接口通信的 http 请求库。同时为了统一接口请求/响应的处理，我们提供如下:
+在 Antd-Template-Vue 开发中，我们选择 Axios 作为与后端接口通信的 http 请求库。同时为了统一接口请求/响应的处理，我们提供如下:
 
 - 请求拦截器
 - 响应拦截器

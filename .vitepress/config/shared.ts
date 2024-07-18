@@ -16,7 +16,7 @@ export const shared = defineConfig({
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Antd Templater' }],
     ['meta', { property: 'og:title', content: 'Antd Templater | Backend Management System Template' }],
-    ['meta', { property: 'og:image', content: 'https://antd-templater.github.io/resource/Ant-Templater3.x.png' }],
+    ['meta', { property: 'og:image', content: 'https://antd-templater.github.io/resource/Ant-Template-Vue3.x.png' }],
     ['link', { rel: 'icon', type: 'image/svg+xml', href: `${base}/logo-mini.svg` }],
     ['link', { rel: 'icon', type: 'image/png', href: `${base}/logo-mini.png` }],
   ],
@@ -29,7 +29,7 @@ export const shared = defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: `${base}/redirect?\${domain}.com/antd-templater/template-3.x` },
+      { icon: 'github', link: `${base}/redirect?\${domain}.com/antd-templater/vue-template-3.x` },
     ],
 
     search: {
