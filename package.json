@@ -16,7 +16,7 @@
     "@ant-design/icons-vue": "^7.0.1",
     "@antd-templater/library-3.x": "^4.3.16",
     "ant-design-vue": "^4.2.3",
-    "dayjs": "^1.11.11",
+    "dayjs": "^1.11.12",
     "js-simpler": "^1.6.2",
     "vue": "^3.4.32",
     "vue-router": "^4.4.0",
