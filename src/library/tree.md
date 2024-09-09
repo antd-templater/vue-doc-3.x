@@ -144,8 +144,8 @@ import CheckedLevel from '@/library/tree/CheckedLevel.md'
 | **checkedKeys (v-model)**         | 节点已勾选的选项                                                                                       | string[] \| number[] |      []       |
 | **selectedKeys (v-model)**        | 节点已选中的选项                                                                                       | string[] \| number[] |      []       |
 | **expandedKeys (v-model)**        | 已展开的节点选项                                                                                       | string[] \| number[] |      []       |
-| **selectedMode**                  | 节点勾选时的模式，[选项 link 模式](#选项link模式)                                                      | 'link' \| 'default'  |   'default'   |
-| **checkedMode**                   | 节点选中时的模式，[选项 link 模式](#选项link模式)                                                      | 'link' \| 'default'  |   'default'   |
+| **selectedMode**                  | 节点选中时的模式，[选项 link 模式](#选项link模式)                                                      | 'link' \| 'default'  |   'default'   |
+| **checkedMode**                   | 节点勾选时的模式，[选项 link 模式](#选项link模式)                                                      | 'link' \| 'default'  |   'default'   |
 | **filterField (v-model)**         | 搜索模式，支持 **key** / **title** 两种模式, 使用 **title** 时支持模糊匹配                             | 'key' \| 'title'     |    'title'    |
 | **filterValue (v-model)**         | 搜索值                                                                                                 | string               |       -       |
 | **fieldNames (原 replaceFields)** | 替换 `title`, `key`, `children` 字段, 若还使用 **replaceFields**，请及时修改 [详情](#stree-fieldnames) | object               |       -       |

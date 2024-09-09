@@ -174,7 +174,7 @@ const groups = formGroupsDefiner([
 </script>
 ```
 
-```typescript:line-numbers{4,17} [全局注册 - main.ts]
+```typescript:line-numbers{2,8} [全局注册 - main.ts]
 import App from "./App.vue"
 import AntdComponentPlugin from "@antd-templater/library-3.x"
 import DirectivePlugin from "@/configure/presetDirective"
