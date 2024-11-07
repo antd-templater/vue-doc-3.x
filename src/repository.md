@@ -12,11 +12,11 @@ const gitUrl = ref('https://github.com/antd-templater/vue-template-3.x.git')
 
 onMounted(() => {
   const href = window.location.href
-  const gitee = 'https://antd-templater.gitee.io/'
-  const giteeUrl = 'https://gitee.com/antd-templater/vue-template-3.x.git'
+  const atomgit = 'https://antd-templater.atomgit.net/'
+  const atomgitUrl = 'https://atomgit.com/antd-templater/vue-template-3.x.git'
 
-  if (href.startsWith(gitee)) {
-    gitUrl.value = giteeUrl
+  if (href.startsWith(atomgit)) {
+    gitUrl.value = atomgitUrl
   }
 })
 </script>

@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 在线演示
-      link: /redirect?antd-templater.${domain}.io/preview/vue3.x
+      link: /redirect?antd-templater.${domain}.io/previews/vue3.x
       target: _blank
 
     - theme: alt

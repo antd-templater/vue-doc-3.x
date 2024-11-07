@@ -30,12 +30,12 @@ const eslintconfigmjs = ref('https://github.com/antd-templater/vue-template-3.x/
 
 onMounted(() => {
   const href = window.location.href
-  const gitee = 'https://antd-templater.gitee.io/'
+  const atomgit = 'https://antd-templater.atomgit.net/'
 
-  if (href.startsWith(gitee)) {
-    prettierrc.value = 'https://gitee.com/antd-templater/vue-template-3.x/blob/main/.prettierrc'
-    prettierignore.value = 'https://gitee.com/antd-templater/vue-template-3.x/blob/main/.prettierignore'
-    eslintconfigmjs.value = 'https://gitee.com/antd-templater/vue-template-3.x/blob/main/eslint.config.mjs'
+  if (href.startsWith(atomgit)) {
+    prettierrc.value = 'https://atomgit.com/antd-templater/vue-template-3.x/blob/main/.prettierrc'
+    prettierignore.value = 'https://atomgit.com/antd-templater/vue-template-3.x/blob/main/.prettierignore'
+    eslintconfigmjs.value = 'https://atomgit.com/antd-templater/vue-template-3.x/blob/main/eslint.config.mjs'
   }
 })
 </script>

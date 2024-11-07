@@ -155,9 +155,9 @@ export default defineConfig(({ mode }) => {
 
 :::
 
-::: details **当 项目部署到 `/preview/vue3.x` 路径下时，可配置如下**
+::: details **当 项目部署到 `/previews/vue3.x` 路径下时，可配置如下**
 
-- VITE_APP_PAGE_BASE = /preview/vue3.x
-- VITE_APP_ROUTER_BASE = /preview/vue3.x
+- VITE_APP_PAGE_BASE = /previews/vue3.x
+- VITE_APP_ROUTER_BASE = /previews/vue3.x
 
 :::

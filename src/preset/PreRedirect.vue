@@ -19,19 +19,16 @@ defineOptions({ name: 'PreRedirect' })
 
 const redirect = computed(() => {
   const host = window.location.host
-  const search = window.location.search
-  const domain = /^(.+\.)?gitee\..+$/i.test(host) ? 'gitee' : 'github'
-  const regexp = /\$\{domain\}/gi
+  const search = window.location.search.slice(1)
+  const domain = /^(.+\.)?atomgit\..+$/i.test(host) ? 'atomgit' : 'github'
+  const regex = /\$\{domain\}/gi
 
-  const route = (
-    search.includes('${domain}')
-      ? search.slice(1).replace(regexp, domain)
-      : search.slice(1)
-  )
+  const route = search.includes('${domain}') ? search.replace(regex, domain) : search
+  const url = route.replaceAll('atomgit.io', 'atomgit.net')
 
-  return !(/^https?:\/\//).test(route)
-    ? `https://${route}`
-    : route
+  return !(/^https?:\/\//).test(url)
+    ? `https://${url}`
+    : url
 })
 
 onMounted(() => {
