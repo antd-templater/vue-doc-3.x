@@ -86,6 +86,19 @@
           @confirm="cellState = false"
         />
       </template>
+
+      <template v-if="column.key === 'autoComplete'">
+        <SEditCellAutoComplete
+          v-model:text="record.autoComplete"
+          v-model:status="cellState"
+          :cellStyle="cellStyle"
+          empty="无输入"
+          :opened="true"
+          :options="completeOptions"
+          :filterOption="(value, option) => !!option?.label.startsWith(value.trim())"
+          @confirm="cellState = false"
+        />
+      </template>
     </template>
   </STable>
 </template>
@@ -118,6 +131,10 @@ const columns = tableColumnsDefiner([
     title: 'SEditCellDatePicker',
     dataIndex: 'datePicker',
   },
+  {
+    title: 'SEditCellAutoComplete',
+    dataIndex: 'autoComplete',
+  },
 ])
 
 const sources = tableSourcesDefiner([
@@ -128,6 +145,7 @@ const sources = tableSourcesDefiner([
     selectIcon: 'BellOutlined',
     treeSelect: 'jack',
     datePicker: '2024-06-01',
+    autoComplete: 'Lucy',
   },
 ])
 
@@ -136,25 +154,21 @@ const scroll = tableScrollDefiner({
   y: 'auto',
 })
 
-// when default is opended
-const cellState = ref(true)
-
-const cellStyle = {
-  container: {
-    display: 'inline-block',
-    width: 'auto',
+/* AutoComplete */
+const completeOptions = ref([
+  {
+    value: 'Alva',
+    label: 'Alva',
   },
-  inputWrapper: {
-    display: 'inline-block',
-    paddingRight: '35px',
-    minWidth: '180px',
+  {
+    value: 'Jack',
+    label: 'Jack',
   },
-  textWrapper: {
-    display: 'inline-block',
-    paddingRight: '35px',
-    width: 'auto',
+  {
+    value: 'Lucy',
+    label: 'Lucy',
   },
-}
+])
 
 /* Select */
 const selectOptions = ref([
@@ -203,6 +217,26 @@ const treeOptions = ref([
     ],
   },
 ])
+
+// when default is opended
+const cellState = ref(true)
+
+const cellStyle = ref({
+  container: {
+    display: 'inline-block',
+    width: 'auto',
+  },
+  inputWrapper: {
+    display: 'inline-block',
+    paddingRight: '35px',
+    minWidth: '180px',
+  },
+  textWrapper: {
+    display: 'inline-block',
+    paddingRight: '35px',
+    width: 'auto',
+  },
+})
 
 const fieldNames = {
   children: 'children',

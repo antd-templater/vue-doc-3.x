@@ -80,13 +80,13 @@ const presetOptions = ref([
   },
 ])
 
-const fieldNames = {
+const fieldNames = ref({
   children: 'children',
   label: 'label',
   value: 'value',
-}
+})
 
-const cellStyle = {
+const cellStyle = ref({
   inputWrapper: {
     display: 'inline-block',
     paddingRight: '30px',
@@ -97,5 +97,5 @@ const cellStyle = {
     paddingRight: '32px',
     width: 'auto',
   },
-}
+})
 </script>

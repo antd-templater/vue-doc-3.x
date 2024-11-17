@@ -43,7 +43,7 @@ const value1 = ref('')
 const value2 = ref('2024-05-31')
 const value3 = ref('2024-06-01')
 
-const cellStyle = {
+const cellStyle = ref({
   inputWrapper: {
     display: 'inline-block',
     paddingRight: '30px',
@@ -54,5 +54,5 @@ const cellStyle = {
     paddingRight: '32px',
     width: 'auto',
   },
-}
+})
 </script>

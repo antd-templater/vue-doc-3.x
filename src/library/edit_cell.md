@@ -1,13 +1,14 @@
 # 单元格编辑框 - SEditCell
 
-适配 date-picker、input、select、textarea、tree-select、s-icon-select 等组件
+适配 auto-complete、date-picker、input、select、textarea、tree-select、s-icon-select 等组件
 
 -> SEditCellInput  
 -> SEditCellSelect  
 -> SEditCellTextarea  
 -> SEditCellSelectIcon  
 -> SEditCellTreeSelect  
--> SEditCellDatePicker
+-> SEditCellDatePicker  
+-> SEditCellAutoComplete
 
 <style lang="less" scoped>
 [code-runner-title] {
@@ -35,6 +36,7 @@ import Textarea from '@/library/editCell/Textarea.md'
 import SelectIcon from '@/library/editCell/SelectIcon.md'
 import TreeSelect from '@/library/editCell/TreeSelect.md'
 import DatePicker from '@/library/editCell/DatePicker.md'
+import AutoComplete from '@/library/editCell/AutoComplete.md'
 import UseInSTable from '@/library/editCell/UseInSTable.md'
 </script>
 
@@ -91,6 +93,15 @@ import UseInSTable from '@/library/editCell/UseInSTable.md'
   </div>
   <div style="padding: 1px;">
     <DatePicker/>
+  </div>
+</div>
+
+<div code-runner style="height: 373px; overflow: hidden;">
+  <div code-runner-title>
+    <h3 id="AutoComplete 输入框">AutoComplete 输入框</h3>
+  </div>
+  <div style="padding: 1px;">
+    <AutoComplete/>
   </div>
 </div>
 
@@ -175,6 +186,13 @@ import UseInSTable from '@/library/editCell/UseInSTable.md'
 | **showTime**      | 增加时间选择功能 | object \| boolean                                                        |   -    |
 | **valueFormat**   | 绑定值的格式     | string [具体格式](https://day.js.org/docs/zh-CN/display/format)          |   -    |
 | **inputReadOnly** | 设置输入框为只读 | boolean                                                                  | false  |
+
+#### SEditCellAutoComplete
+
+| 参数             | 说明               | 类型                                               | 默认值 |
+| :--------------- | :----------------- | :------------------------------------------------- | :----: |
+| **options**      | Options 选项数据   | Array\<{ value, label }>                           |   []   |
+| **filterOption** | 根据输入项进行筛选 | boolean \| (inputValue: string, option) => boolean |   -    |
 
 #### 关于 cellStyle 选项
 

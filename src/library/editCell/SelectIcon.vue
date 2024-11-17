@@ -39,7 +39,7 @@ const value1 = ref<any>('')
 const value2 = ref<any>('AimOutlined')
 const value3 = ref<any>('font-personal-outline')
 
-const cellStyle = {
+const cellStyle = ref({
   inputWrapper: {
     display: 'inline-block',
     paddingRight: '30px',
@@ -50,5 +50,5 @@ const cellStyle = {
     paddingRight: '32px',
     width: 'auto',
   },
-}
+})
 </script>

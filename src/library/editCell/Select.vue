@@ -55,7 +55,7 @@ const presetOptions = ref([
   },
 ])
 
-const cellStyle = {
+const cellStyle = ref({
   inputWrapper: {
     display: 'inline-block',
     paddingRight: '30px',
@@ -66,5 +66,5 @@ const cellStyle = {
     paddingRight: '32px',
     width: 'auto',
   },
-}
+})
 </script>

@@ -111,11 +111,7 @@ const selectOptions = ref([
   },
 ])
 
-const opened = ref(false)
-const check = ref(false)
-const edit = ref(false)
-
-const cellStyle = {
+const cellStyle = ref({
   container: {
     display: 'inline-block',
     width: 'auto',
@@ -130,5 +126,9 @@ const cellStyle = {
     paddingRight: '0',
     width: '150px',
   },
-}
+})
+
+const opened = ref(false)
+const check = ref(false)
+const edit = ref(false)
 </script>

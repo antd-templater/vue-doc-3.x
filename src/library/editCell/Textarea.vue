@@ -37,7 +37,7 @@ const value1 = ref('')
 const value2 = ref('这是一段旧输入文本')
 const value3 = ref('这是一段新输入文本')
 
-const cellStyle = {
+const cellStyle = ref({
   inputWrapper: {
     display: 'inline-block',
     paddingRight: '30px',
@@ -48,5 +48,5 @@ const cellStyle = {
     paddingRight: '32px',
     width: 'auto',
   },
-}
+})
 </script>
