@@ -29,7 +29,7 @@ export const shared = defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: `${base}/redirect?\${domain}.com/antd-templater/vue-template-3.x` },
+      { icon: 'github', link: `${base}/redirect.html?\${domain}.com/antd-templater/vue-template-3.x` },
     ],
 
     search: {
