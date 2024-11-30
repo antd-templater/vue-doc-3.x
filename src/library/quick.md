@@ -7,7 +7,7 @@
 :::details => 适配支持 Ant Design Vue 4.x {open}
 
 ```bash
-pnpm add @antd-templater/library-3.x@^4.3.20
+pnpm add @antd-templater/library-3.x@^4.3.21
 pnpm add @antd-templater/eslint-config@^1.0.7
 
 ```
